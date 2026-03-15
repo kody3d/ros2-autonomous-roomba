@@ -18,8 +18,13 @@ ROS2 (humble/Jazzy) を用いた自律走行ロボット。iRobot Create3 をベ
 <video src="https://github.com/user-attachments/assets/f40b25f6-8eaf-464d-89cb-5450d7911521" controls width="100%"></video>
 
 
-rosbridge_suiteとReactでROS 2 Webアプリを構築。リアルタイムでロボットの状態を可視化し、遠隔操作も可能。
-<img src="https://github.com/kody3d/ros2-autonomous-roomba/blob/main/img/IMG_3291.jpg" alt="ROS2 WebアプリUI" width="400">
+<div align="center">
+  <b>rosbridge_suiteとReactでROS 2 Webアプリを構築。リアルタイムでロボットの状態を可視化し、遠隔操作も可能。</b><br>
+  <img src="https://github.com/kody3d/ros2-autonomous-roomba/blob/main/img/IMG_3291.jpg"
+       alt="ROS2 WebアプリUI"
+       width="400"
+       style="border:1px solid #ccc; border-radius:10px; box-shadow:2px 2px 8px #aaa;">
+</div>
 ---
 
 ## System Architecture
