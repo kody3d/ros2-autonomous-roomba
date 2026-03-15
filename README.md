@@ -23,7 +23,7 @@ ROS2 (humble/Jazzy) を用いた自律走行ロボット。まずはモーター
        height="300"
        style="border:1px solid #ccc; border-radius:10px; box-shadow:2px 2px 8px #aaa;">
 
-  <b>rosbridge_suiteとReactでROS 2 Webアプリを構築</b
+  <b>rosbridge_suiteとReactでROS 2 Webアプリを構築</b>
   <br>
   <img src="https://github.com/kody3d/ros2-autonomous-roomba/blob/main/img/IMG_3291.jpg"
        alt="ROS2 WebアプリUI"
