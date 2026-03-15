@@ -1,0 +1,37 @@
+[4.075s] Invoking command in '/home/mkouda/create_ws/src/joy_translate': PYTHONPATH=/home/mkouda/create_ws/src/build/joy_translate/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mkouda/create_ws/src/install/joy_translate/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/joy_translate build --build-base /home/mkouda/create_ws/src/build/joy_translate/build install --record /home/mkouda/create_ws/src/build/joy_translate/install.log --single-version-externally-managed install_data
+[5.822s] running egg_info
+[5.827s] creating ../build/joy_translate/joy_translate.egg-info
+[5.828s] writing ../build/joy_translate/joy_translate.egg-info/PKG-INFO
+[5.831s] writing dependency_links to ../build/joy_translate/joy_translate.egg-info/dependency_links.txt
+[5.832s] writing entry points to ../build/joy_translate/joy_translate.egg-info/entry_points.txt
+[5.833s] writing requirements to ../build/joy_translate/joy_translate.egg-info/requires.txt
+[5.834s] writing top-level names to ../build/joy_translate/joy_translate.egg-info/top_level.txt
+[5.834s] writing manifest file '../build/joy_translate/joy_translate.egg-info/SOURCES.txt'
+[5.848s] reading manifest file '../build/joy_translate/joy_translate.egg-info/SOURCES.txt'
+[5.854s] writing manifest file '../build/joy_translate/joy_translate.egg-info/SOURCES.txt'
+[5.855s] running build
+[5.855s] running build_py
+[5.856s] creating /home/mkouda/create_ws/src/build/joy_translate/build
+[5.857s] creating /home/mkouda/create_ws/src/build/joy_translate/build/lib
+[5.857s] creating /home/mkouda/create_ws/src/build/joy_translate/build/lib/joy_translate
+[5.858s] copying joy_translate/__init__.py -> /home/mkouda/create_ws/src/build/joy_translate/build/lib/joy_translate
+[5.858s] copying joy_translate/joy_translate_node.py -> /home/mkouda/create_ws/src/build/joy_translate/build/lib/joy_translate
+[5.859s] running install
+[5.860s] running install_lib
+[5.866s] creating /home/mkouda/create_ws/src/install/joy_translate/lib/python3.10/site-packages/joy_translate
+[5.867s] copying /home/mkouda/create_ws/src/build/joy_translate/build/lib/joy_translate/__init__.py -> /home/mkouda/create_ws/src/install/joy_translate/lib/python3.10/site-packages/joy_translate
+[5.868s] copying /home/mkouda/create_ws/src/build/joy_translate/build/lib/joy_translate/joy_translate_node.py -> /home/mkouda/create_ws/src/install/joy_translate/lib/python3.10/site-packages/joy_translate
+[5.873s] byte-compiling /home/mkouda/create_ws/src/install/joy_translate/lib/python3.10/site-packages/joy_translate/__init__.py to __init__.cpython-310.pyc
+[5.874s] byte-compiling /home/mkouda/create_ws/src/install/joy_translate/lib/python3.10/site-packages/joy_translate/joy_translate_node.py to joy_translate_node.cpython-310.pyc
+[5.877s] running install_data
+[5.878s] creating /home/mkouda/create_ws/src/install/joy_translate/share/ament_index
+[5.878s] creating /home/mkouda/create_ws/src/install/joy_translate/share/ament_index/resource_index
+[5.879s] creating /home/mkouda/create_ws/src/install/joy_translate/share/ament_index/resource_index/packages
+[5.879s] copying resource/joy_translate -> /home/mkouda/create_ws/src/install/joy_translate/share/ament_index/resource_index/packages
+[5.880s] copying package.xml -> /home/mkouda/create_ws/src/install/joy_translate/share/joy_translate
+[5.880s] running install_egg_info
+[5.886s] Copying ../build/joy_translate/joy_translate.egg-info to /home/mkouda/create_ws/src/install/joy_translate/lib/python3.10/site-packages/joy_translate-0.0.0-py3.10.egg-info
+[5.891s] running install_scripts
+[5.990s] Installing joy_translate_node script to /home/mkouda/create_ws/src/install/joy_translate/lib/joy_translate
+[5.992s] writing list of installed files to '/home/mkouda/create_ws/src/build/joy_translate/install.log'
+[6.140s] Invoked command in '/home/mkouda/create_ws/src/joy_translate' returned '0': PYTHONPATH=/home/mkouda/create_ws/src/build/joy_translate/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mkouda/create_ws/src/install/joy_translate/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/joy_translate build --build-base /home/mkouda/create_ws/src/build/joy_translate/build install --record /home/mkouda/create_ws/src/build/joy_translate/install.log --single-version-externally-managed install_data

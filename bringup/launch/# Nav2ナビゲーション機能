@@ -1,0 +1,14 @@
+# Nav2ナビゲーション機能
+nav2_launch = IncludeLaunchDescription(
+    PythonLaunchDescriptionSource([
+        get_package_share_directory('nav2_bringup'),
+        '/launch/navigation_launch.py'
+    ]),
+    launch_arguments={
+        'use_sim_time': 'false',  # 直接文字列を使用
+        # 絶対パスを使用
+        'params_file': '/home/mkouda/create_ws/src/bringup/params/nav2_params.yaml',
+        'autostart': 'true',
+        'use_lifecycle_mgr': 'true'
+    }.items()
+)

@@ -1,0 +1,128 @@
+amcl:
+  ros__parameters:
+    use_sim_time: false
+    
+    # TF設定（重要）
+    tf_broadcast: true              # TF配信を有効化（必須）
+    tf_buffer_duration: 10.0        # TFバッファ保持時間(秒)
+                                   # デフォルト10秒、遅延環境では延長
+                                   # 長く→古いデータも参照可能、メモリ増
+                                   # 短く→軽量、データ不足エラー増
+    
+    # Transform設定の詳細
+    transform_tolerance: 0.15       # TF変換許容遅延(秒)
+                                   # 小さく→厳密、エラー多発
+                                   # 大きく→緩い、古いデータ許容
+                                   # Raspberry Piでは0.15-0.3推奨
+    # デフォルト値: 0.2
+    # オドメトリノイズモデル（Raspberry Pi向け軽量化維持）
+    # alpha1: 0.1                     # 回転時の回転ノイズ
+    # alpha2: 0.1                     # 回転時の並進ノイズ  
+    # alpha3: 0.1                     # 並進時の並進ノイズ
+    # alpha4: 0.1                     # 並進時の回転ノイズ
+    # alpha5: 0.1                     # 並進時の回転ノイズ（非ホロノミック）
+    
+    # パーティクル設定（軽量化）多いと安定？
+    laser_max_beams: 300            # 360→80（max_beamsの1.3倍程度）
+    min_particles: 300              # 200→100（パーティクル数削減）
+    max_particles: 900              # 1000→500（パーティクル数削減）
+    
+    # 更新頻度設定（軽量化）
+    update_min_d: 0.10               # 移動距離閾値(m)
+    update_min_a: 0.05              # 0.1→0.15（回転角度閾値rad）
+    resample_interval: 2            # 2→3（リサンプル頻度を下げる）3まにあわないかも２
+    
+    # リカバリー設定
+    recovery_alpha_slow: 0.001      # スロー平均フィルタ
+    recovery_alpha_fast: 0.1        # ファスト平均フィルタ
+    
+    # フレーム設定
+    global_frame_id: "map"
+    odom_frame_id: "odom"  
+    base_frame_id: "base_link"
+    
+    # レーザー設定
+    laser_model_type: "likelihood_field"  # beam_modelより軽量
+    laser_likelihood_max_dist: 2.0  # 尤度計算最大距離(m)
+    laser_sigma_hit: 0.2            # ヒット時の標準偏差
+    laser_z_hit: 0.5                # ヒット重み
+    laser_z_short: 0.05             # ショート重み
+    laser_z_max: 0.05               # 最大距離重み
+    laser_z_rand: 0.5               # ランダム重み
+    
+    # 初期位置設定（ルンバ用）
+    always_reset_initial_pose: false
+    initial_pose_x: 0.0
+    initial_pose_y: 0.0
+    initial_pose_a: 0.0
+    initial_pose_xx: 1.0            # 初期位置分散(m)
+    initial_pose_yy: 1.0            # 初期位置分散(m)
+    initial_pose_aa: 0.5           # 初期角度分散(rad)
+    
+    # 追加のTF関連設定
+    save_pose_rate: 5.0             # 位置保存頻度(Hz)
+    first_map_only: false           # 最初のマップのみ使用
+    max_beams: 500                   # 使用するレーザービーム数上限
+    pf_err: 0.05                    # パーティクルフィルタエラー閾値
+    pf_z: 0.99                      # パーティクルフィルタ信頼度
+
+
+# amcl:
+#   ros__parameters:
+#     # AMCL (Adaptive Monte Carlo Localization) - 自己位置推定
+#     use_sim_time: False  # シミュレーション時間を使用するか（実機ではFalse）
+    
+#     # パーティクルフィルタ設定
+#     min_particles: 200  # 最小パーティクル数
+#     max_particles: 2000  # 最大パーティクル数
+#     # 値を大きくすると: より正確な位置推定、計算負荷増加
+#     # 値を小さくすると: 計算軽量化、位置推定精度低下
+    
+#     # 更新閾値（これらの値を超えるとパーティクルフィルタが更新される）
+#     update_min_d: 0.25  # 最小移動距離[m]
+#     update_min_a: 0.2   # 最小回転角度[rad]
+#     # 値を大きくすると: 更新頻度低下、計算負荷軽減、位置推定遅延
+#     # 値を小さくすると: 更新頻度増加、位置推定リアルタイム性向上、計算負荷増加
+    
+#     # リサンプリング間隔
+#     resample_interval: 1  # パーティクルリサンプリング間隔
+    
+#     # 変換許容時間
+#     transform_tolerance: 1.0  # 変換の許容遅延時間[秒]
+    
+#     # 初期姿勢分散
+#     initial_pose:
+#       x: 0.0
+#       y: 0.0
+#       z: 0.0
+#       yaw: 0.0
+    
+#     # センサモデル設定
+#     laser_max_range: 100.0  # レーザー最大範囲[m]（Roombaは通常3-4m程度）
+#     laser_min_range: -1.0   # レーザー最小範囲[m]（-1で自動設定）
+#     laser_max_beams: 60     # 使用するレーザービーム数
+#     # 値を大きくすると: より詳細なマッチング、計算負荷増加
+#     # 値を小さくすると: 計算軽量化、マッチング精度低下
+    
+#     # ロボット運動モデル
+#     odom_model_type: "diff"  # 差動駆動モデル（Roomba用）
+#     odom_alpha1: 0.2  # 回転による回転誤差
+#     odom_alpha2: 0.2  # 並進による回転誤差
+#     odom_alpha3: 0.8  # 並進による並進誤差
+#     odom_alpha4: 0.2  # 回転による並進誤差
+#     # 値を大きくすると: より多くの不確実性を考慮、位置推定が保守的
+#     # 値を小さくすると: オドメトリを信頼、位置推定が楽観的
+
+
+
+
+# マップサーバー設定
+map_server:
+  ros__parameters:
+    yaml_filename: "/home/mkouda/map.yaml"
+    use_sim_time: false
+    topic_name: "map"
+    frame_id: "map"
+    save_map_timeout: 5.0      # マップ保存タイムアウト[秒]
+    free_thresh_default: 0.25  # 自由空間閾値
+    occupied_thresh_default: 0.65  # 占有空間閾

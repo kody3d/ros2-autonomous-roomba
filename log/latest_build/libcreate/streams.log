@@ -1,0 +1,51 @@
+[0.114s] Invoking command in '/home/mkouda/create_ws/src/build/libcreate': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/mkouda/create_ws/src/build/libcreate -- -j4 -l4
+[0.323s] [35m[1mConsolidate compiler generated dependencies of target create[0m
+[0.595s] [ 22%] Built target create
+[0.702s] [35m[1mConsolidate compiler generated dependencies of target battery_level[0m
+[0.747s] [35m[1mConsolidate compiler generated dependencies of target cliffs[0m
+[0.761s] [35m[1mConsolidate compiler generated dependencies of target drive_circle[0m
+[0.762s] [35m[1mConsolidate compiler generated dependencies of target bumpers[0m
+[1.017s] [ 27%] Built target battery_level
+[1.060s] [ 33%] Built target bumpers
+[1.075s] [ 38%] Built target drive_circle
+[1.104s] [ 44%] Built target cliffs
+[1.147s] [35m[1mConsolidate compiler generated dependencies of target leds[0m
+[1.194s] [35m[1mConsolidate compiler generated dependencies of target packets[0m
+[1.230s] [35m[1mConsolidate compiler generated dependencies of target play_song[0m
+[1.255s] [35m[1mConsolidate compiler generated dependencies of target wheeldrop[0m
+[1.416s] [ 50%] Built target leds
+[1.469s] [ 55%] Built target play_song
+[1.506s] [35m[1mConsolidate compiler generated dependencies of target test_create[0m
+[1.511s] [ 61%] Built target packets
+[1.536s] [ 66%] Built target wheeldrop
+[1.590s] [35m[1mConsolidate compiler generated dependencies of target test_data[0m
+[1.626s] [35m[1mConsolidate compiler generated dependencies of target test_packet[0m
+[1.629s] [35m[1mConsolidate compiler generated dependencies of target test_robot_model[0m
+[1.763s] [ 72%] Built target test_create
+[1.796s] [ 77%] Built target test_robot_model
+[1.815s] [ 88%] Built target test_packet
+[1.822s] [ 83%] Built target test_data
+[1.880s] [35m[1mConsolidate compiler generated dependencies of target test_serial_stream[0m
+[1.926s] [35m[1mConsolidate compiler generated dependencies of target test_serial_query[0m
+[2.057s] [ 94%] Built target test_serial_stream
+[2.095s] [100%] Built target test_serial_query
+[2.344s] Invoked command in '/home/mkouda/create_ws/src/build/libcreate' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/mkouda/create_ws/src/build/libcreate -- -j4 -l4
+[2.353s] Invoking command in '/home/mkouda/create_ws/src/build/libcreate': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/mkouda/create_ws/src/build/libcreate
+[2.431s] -- Install configuration: ""
+[2.432s] -- Up-to-date: /home/mkouda/create_ws/src/install/libcreate/lib/libcreate.so
+[2.432s] -- Up-to-date: /home/mkouda/create_ws/src/install/libcreate/include
+[2.433s] -- Up-to-date: /home/mkouda/create_ws/src/install/libcreate/include/create
+[2.433s] -- Up-to-date: /home/mkouda/create_ws/src/install/libcreate/include/create/serial_query.h
+[2.434s] -- Up-to-date: /home/mkouda/create_ws/src/install/libcreate/include/create/util.h
+[2.434s] -- Up-to-date: /home/mkouda/create_ws/src/install/libcreate/include/create/serial_stream.h
+[2.435s] -- Up-to-date: /home/mkouda/create_ws/src/install/libcreate/include/create/data.h
+[2.435s] -- Up-to-date: /home/mkouda/create_ws/src/install/libcreate/include/create/serial.h
+[2.436s] -- Up-to-date: /home/mkouda/create_ws/src/install/libcreate/include/create/create.h
+[2.436s] -- Up-to-date: /home/mkouda/create_ws/src/install/libcreate/include/create/packet.h
+[2.436s] -- Up-to-date: /home/mkouda/create_ws/src/install/libcreate/include/create/types.h
+[2.437s] -- Up-to-date: /home/mkouda/create_ws/src/install/libcreate/lib/cmake/libcreate/libcreate-config.cmake
+[2.438s] -- Up-to-date: /home/mkouda/create_ws/src/install/libcreate/lib/cmake/libcreate/libcreate-config-version.cmake
+[2.439s] -- Up-to-date: /home/mkouda/create_ws/src/install/libcreate/lib/cmake/libcreate/libcreate-targets.cmake
+[2.440s] -- Up-to-date: /home/mkouda/create_ws/src/install/libcreate/lib/cmake/libcreate/libcreate-targets-noconfig.cmake
+[2.441s] -- Up-to-date: /home/mkouda/create_ws/src/install/libcreate/share/libcreate/package.xml
+[2.523s] Invoked command in '/home/mkouda/create_ws/src/build/libcreate' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/mkouda/create_ws/src/build/libcreate

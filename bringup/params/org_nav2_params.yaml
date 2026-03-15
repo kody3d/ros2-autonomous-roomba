@@ -1,0 +1,370 @@
+# # ナビゲーション用基本パラメータ（コメント付き詳細版）
+# bt_navigator:
+#   ros__parameters:
+#     use_sim_time: False
+#     global_frame: map
+#     robot_base_frame: base_link
+#     odom_topic: /odom
+#     bt_loop_duration: 50              # BehaviorTreeのループ間隔(ms)
+#                                      # 小さく→反応速度向上、CPU負荷増
+#                                      # 大きく→CPU負荷軽減、反応遅延
+#                                      # Raspberry Pi等では50-100推奨
+#     default_server_timeout: 5        # サーバー応答タイムアウト(秒)
+#                                      # 小さく→早期エラー検出
+#                                      # 大きく→処理時間確保、遅延許容
+#     default_nav_to_pose_bt_xml: /opt/ros/humble/share/nav2_bt_navigator/behavior_trees/navigate_to_pose_w_replanning_and_recovery.xml
+
+
+bt_navigator:
+  ros__parameters:
+    use_sim_time: false
+    global_frame: map
+    robot_base_frame: base_link
+    odom_topic: /odom
+    bt_loop_duration: 50
+    default_server_timeout: 5
+    default_nav_to_pose_bt_xml: /opt/ros/humble/share/nav2_bt_navigator/behavior_trees/navigate_to_pose_w_replanning_and_recovery.xml
+
+
+
+# Recovery Behavior設定
+recoveries_server:
+  ros__parameters:
+    use_sim_time: False
+    costmap_topic: local_costmap/costmap_raw
+    footprint_topic: local_costmap/published_footprint
+    cycle_frequency: 3.0              # リカバリー動作の実行頻度(Hz)
+                                     # 高く→細かい制御、CPU負荷増
+                                     # 低く→軽量化、粗い制御
+                                     # 組み込み系では3-5Hz推奨
+    recovery_plugins: ["spin", "backup", "wait"]
+    spin:
+      plugin: "nav2_recoveries/Spin"  # その場回転でのリカバリー
+    backup:
+      plugin: "nav2_recoveries/BackUp" # 後退でのリカバリー
+    wait:
+      plugin: "nav2_recoveries/Wait"   # 待機でのリカバリー
+    global_frame: odom
+    robot_base_frame: base_link
+    transform_timeout: 0.4            # TF変換のタイムアウト(秒)
+                                     # 小さく→厳密、エラー多発可能性
+                                     # 大きく→緩い、古いデータ許容
+                                     # 通信遅延ある環境では0.2-0.5
+    simulate_ahead_time: 2.0          # 前方予測時間(秒)
+                                     # 長く→安全、計算負荷増
+                                     # 短く→軽量、反応鈍化
+                                     # 低速ロボットでは1.0-2.0
+    max_rotational_vel: 0.2           # 最大回転速度(rad/s)
+                                     # 高く→高速回転、不安定
+                                     # 低く→安全、動作遅い
+                                     # ルンバ等では0.5-1.0
+    min_rotational_vel: 0.1           # 最小回転速度(rad/s)
+                                     # 高く→確実動作、選択肢減
+                                     # 低く→細かい調整可能
+    rotational_acc_lim: 1.0           # 回転加速度制限(rad/s²)
+                                     # 高く→機敏、振動増
+                                     # 低く→滑らか、反応遅い
+
+# グローバルコストマップ（静的マップベース）
+global_costmap:
+  global_costmap:
+    ros__parameters:
+      use_sim_time: False
+      # robot_radius: 0.19
+      update_frequency: 0.5           # 更新頻度(Hz)
+                                     # 高く→最新情報、CPU負荷増
+                                     # 低く→軽量、情報遅延
+                                     # グローバルは0.5-2.0で十分
+      publish_frequency: 1.0          # 配信頻度(Hz)
+                                     # 高く→リアルタイム、通信負荷増
+                                     # 低く→軽量、表示遅延
+      global_frame: map
+      robot_base_frame: base_link
+      footprint: "[[0.19, 0.0], [0.0, 0.19], [-0.19, 0.0], [0.0, -0.19]]"
+      # footprint: "[[0.16, 0.0], [0.15, 0.05], [0.13, 0.10], [0.10, 0.13], [0.05, 0.15], [0.0, 0.16], [-0.05, 0.15], [-0.10, 0.13], [-0.13, 0.10], [-0.15, 0.05], [-0.16, 0.0], [-0.15, -0.05], [-0.13, -0.10], [-0.10, -0.13], [-0.05, -0.15], [0.0, -0.16], [0.05, -0.15], [0.10, -0.13], [0.13, -0.10], [0.15, -0.05]]"
+      resolution: 0.1                # セル解像度(m/セル)
+                                     # 小さく→高精度、メモリ・CPU増
+                                     # 大きく→軽量、精度低下
+                                     # 0.05-0.1が一般的
+      track_unknown_space: true       # 未知領域の追跡
+                                     # true→マップ外も考慮、安全
+                                     # false→既知領域のみ、軽量
+      plugins: ["static_layer", "obstacle_layer", "inflation_layer"]
+
+      static_layer:
+        plugin: "nav2_costmap_2d::StaticLayer"
+        map_subscribe_transient_local: True  # マップの永続化受信
+
+      obstacle_layer:
+        plugin: "nav2_costmap_2d::ObstacleLayer"
+        enabled: True
+        observation_sources: scan
+        scan:
+          topic: /scan
+          max_obstacle_height: 1.5    # 障害物認識高さ上限(m)
+                                     # 高く→高い物も検知、誤検知増
+                                     # 低く→低い物のみ、見落とし増
+          clearing: True              # レーザーでの障害物クリア
+                                     # true→動的更新、計算負荷増
+                                     # false→静的、軽量
+          marking: True               # レーザーでの障害物マーク
+          data_type: "LaserScan"
+          raytrace_max_range: 8.0     # レイトレース最大距離(m)
+                                     # 長く→広範囲クリア、計算負荷増
+                                     # 短く→狭範囲、軽量、障害物残存
+                                     # 部屋サイズ×0.5程度推奨
+          raytrace_min_range: 0.05     # レイトレース最小距離(m)
+                                     # 大きく→近距離ノイズ除去、見落とし
+                                     # 小さく→全範囲、ノイズ増
+          obstacle_max_range: 8.0     # 障害物検知最大距離(m)
+                                     # 長く→早期発見、誤検知増
+                                     # 短く→確実検知、発見遅れ
+          obstacle_min_range: 0.25     # 障害物検知最小距離(m)
+                                     # 大きく→近距離ノイズ排除
+                                     # 小さく→接触検知、ノイズ増
+
+      inflation_layer:
+        plugin: "nav2_costmap_2d::InflationLayer"
+        cost_scaling_factor: 1.0      # 膨張コスト倍率
+                                     # 高く→強い回避、迂回増
+                                     # 低く→弱い回避、接触リスク増
+                                     # 狭い環境では1.0-3.0
+        inflation_radius: 1.0         # 膨張半径(m)
+                                     # 大きく→安全マージン大、通れない
+                                     # 小さく→ギリギリ通行、接触リスク
+                                     # ロボット半径×1.5-3.0
+
+# ローカルコストマップ（動的回避用）
+local_costmap:
+  local_costmap:
+    ros__parameters:
+
+      use_sim_time: False
+      # robot_radius: 0.19
+      update_frequency: 5.0           # 更新頻度(Hz)
+                                     # 高く→リアルタイム、CPU負荷増
+                                     # 低く→軽量、反応遅延
+                                     # 動的環境では5-10Hz、静的では2-5Hz
+      publish_frequency: 2.0          # 配信頻度(Hz)
+                                     # 高く→滑らか表示、通信負荷増
+                                     # 低く→軽量、カクカク表示
+      global_frame: odom
+      robot_base_frame: base_link
+      # footprint: "[[0.16, 0.0], [0.15, 0.05], [0.13, 0.10], [0.10, 0.13], [0.05, 0.15], [0.0, 0.16], [-0.05, 0.15], [-0.10, 0.13], [-0.13, 0.10], [-0.15, 0.05], [-0.16, 0.0], [-0.15, -0.05], [-0.13, -0.10], [-0.10, -0.13], [-0.05, -0.15], [0.0, -0.16], [0.05, -0.15], [0.10, -0.13], [0.13, -0.10], [0.15, -0.05]]"
+      footprint: "[[0.19, 0.0], [0.0, 0.19], [-0.19, 0.0], [0.0, -0.19]]"
+      rolling_window: true            # ロボット中心の移動ウィンドウ
+
+      width: 4                        # コストマップ幅(m)
+      height: 4                       # コストマップ高さ(m)
+                                     # 大きく→広視野、メモリ・CPU増
+                                     # 小さく→狭視野、軽量、急カーブ困難
+                                     # 最高速度×予測時間×2程度
+      resolution: 0.05                # セル解像度(m/セル)
+                                     # 小さく→高精度、計算負荷激増
+                                     # 大きく→軽量、精度低下
+                                     # ローカルは0.05-0.1推奨
+      footprint_padding: 0.01
+
+      plugins: ["obstacle_layer", "inflation_layer"]
+
+      obstacle_layer:
+        plugin: "nav2_costmap_2d::ObstacleLayer"
+        enabled: True
+        observation_sources: scan
+        scan:
+          topic: /scan
+          max_obstacle_height: 2.0
+          clearing: True
+          marking: True
+          data_type: "LaserScan"
+          raytrace_max_range: 2.8     # レイトレース範囲(m) （障害物検知より少し広く）
+                                     # ローカルでは短めでOK
+          raytrace_min_range: 0.15    # ノイズ除去範囲(m)
+                                     # センサー特性に合わせる
+          obstacle_max_range: 2.5     # 障害物検知範囲(m)（枠の半径に合わせる）
+                                     # 予測時間×最高速度程度
+          obstacle_min_range: 0.15    # 近距離ノイズ除去(m)
+          
+      inflation_layer:
+        plugin: "nav2_costmap_2d::InflationLayer"
+        cost_scaling_factor: 0.25      # 膨張コスト倍率
+                                     # ローカルは緩めでOK（動的回避重視）
+        inflation_radius: 0.25        # 膨張半径(m)
+                                     # ローカルは小さめ（機敏な回避）
+        inflate_unknown: false        # 未知領域膨張
+        inflate_around_unknown: false # 未知領域周辺膨張
+
+# コントローラー設定（経路追従制御）
+
+# 修正版
+controller_server:
+  ros__parameters:
+    use_sim_time: false
+    controller_frequency: 5.0
+    min_x_velocity_threshold: 0.001
+    min_y_velocity_threshold: 0.5
+    min_theta_velocity_threshold: 0.001
+    progress_checker_plugins: ["progress_checker"]
+    goal_checker_plugins: ["general_goal_checker"]
+    controller_plugins: ["FollowPath"]
+
+    progress_checker:
+      plugin: "nav2_controller::SimpleProgressChecker"
+      required_movement_radius: 0.01
+      movement_time_allowance: 10.0
+    
+    general_goal_checker:
+      plugin: "nav2_controller::SimpleGoalChecker"
+      xy_goal_tolerance: 0.25
+      yaw_goal_tolerance: 0.2
+      stateful: true
+
+    FollowPath:
+      plugin: "dwb_core::DWBLocalPlanner"
+      debug_trajectory_details: false
+      
+      # 速度制限
+      min_vel_x: 0.01
+      max_vel_x: 0.2
+      max_vel_y: 0.0
+      max_vel_theta: 0.5
+      min_speed_xy: 0.0
+      min_speed_theta: 0.0
+      max_speed_xy: 0.2
+      
+      # 加速度制限
+      acc_lim_x: 0.2
+      acc_lim_y: 0.0
+      acc_lim_theta: 0.3
+      decel_lim_x: -1.0
+      decel_lim_y: 0.0
+      decel_lim_theta: -0.3
+      
+      # サンプリング
+      vx_samples: 6
+      vy_samples: 0
+      vtheta_samples: 5
+      
+      # シミュレーション
+      sim_time: 0.75
+      linear_granularity: 0.05
+      angular_granularity: 0.025
+      transform_tolerance: 0.2
+      xy_goal_tolerance: 0.4
+      trans_stopped_velocity: 0.05
+      short_circuit_trajectory_evaluation: false
+      stateful: true
+      
+      # Critics（使用するもののみ設定）
+      critics: ["BaseObstacle", "PathAlign", "GoalDist", "Oscillation"]
+      
+      BaseObstacle:
+        cost_scaling_factor: 2.0
+        sum_scores: false
+        
+      PathAlign:
+        cost_scaling_factor: 24.0
+        forward_point_distance: 0.5
+        aggregation_type: "sum"
+        
+      GoalDist:
+        cost_scaling_factor: 24.0
+        
+      Oscillation:
+        cost_scaling_factor: 2.0
+        oscillation_reset_dist: 0.05
+        oscillation_reset_angle: 0.5
+
+# プランナーサーバー設定（経路計画）
+planner_server:
+  ros__parameters:
+    expected_planner_frequency: 1.0
+    use_sim_time: False
+    planner_plugins: ["GridBased"]
+    GridBased:
+      plugin: "nav2_navfn_planner/NavfnPlanner"
+      tolerance: 0.8                  # 経路計画許容誤差(m)
+                                     # 小さく→厳密経路、計画失敗増
+                                     # 大きく→大雑把、計画成功増
+      use_astar: false                # A*アルゴリズム使用
+                                     # true→最適経路、計算負荷増
+                                     # false→近似経路、高速計算
+      allow_unknown: true             # 未知領域通行許可
+                                     # true→探索的、リスク増
+                                     # false→安全重視、経路制限
+
+
+
+# Behavior Server設定
+behavior_server:
+  ros__parameters:
+    use_sim_time: false
+    costmap_topic: local_costmap/costmap_raw
+    footprint_topic: local_costmap/published_footprint
+    cycle_frequency: 10.0
+    behavior_plugins: ["spin", "backup", "assisted_teleop", "wait"]
+    spin:
+      plugin: "nav2_behaviors/Spin"
+    backup:
+      plugin: "nav2_behaviors/BackUp"
+    assisted_teleop:
+      plugin: "nav2_behaviors/AssistedTeleop"
+    wait:
+      plugin: "nav2_behaviors/Wait"
+    global_frame: odom
+    robot_base_frame: base_link
+    transform_tolerance: 0.1
+    simulate_ahead_time: 2.0
+    max_rotational_vel: 1.0
+    min_rotational_vel: 0.4
+    rotational_acc_lim: 3.2
+
+# Waypoint Follower設定
+waypoint_follower:
+  ros__parameters:
+    use_sim_time: false
+    loop_rate: 20.0
+    stop_on_failure: false
+    waypoint_task_executor_plugin: "wait_at_waypoint"
+    wait_at_waypoint:
+      plugin: "nav2_waypoint_follower::WaitAtWaypoint"
+      enabled: true
+      waypoint_pause_duration: 0
+
+# Velocity Smoother設定
+velocity_smoother:
+  ros__parameters:
+    use_sim_time: false
+    smoothing_frequency: 20.0
+    scale_velocities: false
+    feedback: "OPEN_LOOP"
+    max_velocity: [0.2, 0.0, 0.5]
+    min_velocity: [-0.2, 0.0, -0.5]
+    max_accel: [0.2, 0.0, 0.3]
+    max_decel: [-0.2, 0.0, -0.3]
+    odom_topic: "/odom"
+    odom_duration: 0.1
+    deadband_velocity: [0.0, 0.0, 0.0]
+    velocity_timeout: 1.0
+
+# Collision Monitor設定（オプション）
+collision_monitor:
+  ros__parameters:
+    use_sim_time: false
+    base_frame_id: "base_link"
+    odom_frame_id: "odom"
+    cmd_vel_in_topic: "cmd_vel_smoothed"
+    cmd_vel_out_topic: "cmd_vel"
+    state_topic: "collision_monitor_state"
+    transform_tolerance: 0.2
+    source_timeout: 4.0
+    base_shift_correction: true
+    stop_pub_timeout: 2.0
+    polygons: ["PolygonStop"]
+    PolygonStop:
+      type: "circle"
+      radius: 0.3
+      action_type: "stop"
+      min_points: 4
+      visualize: true
+      polygon_pub_topic: "polygon_stop"

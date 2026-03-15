@@ -1,0 +1,519 @@
+[0.728s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.729s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0xffffa5e5d3c0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffffa60022c0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffffa60022c0>>, mixin_verb=('build',))
+[1.919s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.919s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.920s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.920s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.920s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.920s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.920s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/mkouda/create_ws/src'
+[1.921s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.921s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.922s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.922s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.922s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.922s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.923s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.923s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.923s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.967s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.967s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.967s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.967s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.968s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.968s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.968s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.969s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.969s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot) by extensions ['ignore', 'ignore_ament_install']
+[1.970s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot) by extension 'ignore'
+[1.970s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot) by extension 'ignore_ament_install'
+[1.970s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot) by extensions ['colcon_pkg']
+[1.970s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot) by extension 'colcon_pkg'
+[1.970s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot) by extensions ['colcon_meta']
+[1.970s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot) by extension 'colcon_meta'
+[1.971s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot) by extensions ['ros']
+[1.971s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot) by extension 'ros'
+[1.971s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot) by extensions ['cmake', 'python']
+[1.971s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot) by extension 'cmake'
+[1.971s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot) by extension 'python'
+[1.972s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot) by extensions ['python_setup_py']
+[1.972s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot) by extension 'python_setup_py'
+[1.972s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_bringup) by extensions ['ignore', 'ignore_ament_install']
+[1.972s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_bringup) by extension 'ignore'
+[1.973s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_bringup) by extension 'ignore_ament_install'
+[1.973s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_bringup) by extensions ['colcon_pkg']
+[1.973s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_bringup) by extension 'colcon_pkg'
+[1.973s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_bringup) by extensions ['colcon_meta']
+[1.973s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_bringup) by extension 'colcon_meta'
+[1.973s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_bringup) by extensions ['ros']
+[1.974s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_bringup) by extension 'ros'
+[1.986s] DEBUG:colcon.colcon_core.package_identification:Package 'create_robot/create_bringup' with type 'ros.ament_cmake' and name 'create_bringup'
+[1.987s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_description) by extensions ['ignore', 'ignore_ament_install']
+[1.987s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_description) by extension 'ignore'
+[1.987s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_description) by extension 'ignore_ament_install'
+[1.988s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_description) by extensions ['colcon_pkg']
+[1.988s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_description) by extension 'colcon_pkg'
+[1.988s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_description) by extensions ['colcon_meta']
+[1.988s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_description) by extension 'colcon_meta'
+[1.988s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_description) by extensions ['ros']
+[1.988s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_description) by extension 'ros'
+[1.992s] DEBUG:colcon.colcon_core.package_identification:Package 'create_robot/create_description' with type 'ros.ament_cmake' and name 'create_description'
+[1.993s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_driver) by extensions ['ignore', 'ignore_ament_install']
+[1.993s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_driver) by extension 'ignore'
+[1.994s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_driver) by extension 'ignore_ament_install'
+[1.994s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_driver) by extensions ['colcon_pkg']
+[1.994s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_driver) by extension 'colcon_pkg'
+[1.995s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_driver) by extensions ['colcon_meta']
+[1.995s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_driver) by extension 'colcon_meta'
+[1.995s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_driver) by extensions ['ros']
+[1.995s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_driver) by extension 'ros'
+[2.002s] DEBUG:colcon.colcon_core.package_identification:Package 'create_robot/create_driver' with type 'ros.ament_cmake' and name 'create_driver'
+[2.002s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_msgs) by extensions ['ignore', 'ignore_ament_install']
+[2.003s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_msgs) by extension 'ignore'
+[2.003s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_msgs) by extension 'ignore_ament_install'
+[2.003s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_msgs) by extensions ['colcon_pkg']
+[2.003s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_msgs) by extension 'colcon_pkg'
+[2.003s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_msgs) by extensions ['colcon_meta']
+[2.003s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_msgs) by extension 'colcon_meta'
+[2.004s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_msgs) by extensions ['ros']
+[2.004s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_msgs) by extension 'ros'
+[2.007s] DEBUG:colcon.colcon_core.package_identification:Package 'create_robot/create_msgs' with type 'ros.ament_cmake' and name 'create_msgs'
+[2.008s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_robot) by extensions ['ignore', 'ignore_ament_install']
+[2.008s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_robot) by extension 'ignore'
+[2.009s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_robot) by extension 'ignore_ament_install'
+[2.009s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_robot) by extensions ['colcon_pkg']
+[2.009s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_robot) by extension 'colcon_pkg'
+[2.009s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_robot) by extensions ['colcon_meta']
+[2.009s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_robot) by extension 'colcon_meta'
+[2.010s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_robot) by extensions ['ros']
+[2.010s] Level 1:colcon.colcon_core.package_identification:_identify(create_robot/create_robot) by extension 'ros'
+[2.013s] DEBUG:colcon.colcon_core.package_identification:Package 'create_robot/create_robot' with type 'ros.ament_cmake' and name 'create_robot'
+[2.014s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[2.014s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[2.014s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[2.015s] Level 1:colcon.colcon_core.package_identification:_identify(joy_translate) by extensions ['ignore', 'ignore_ament_install']
+[2.015s] Level 1:colcon.colcon_core.package_identification:_identify(joy_translate) by extension 'ignore'
+[2.015s] Level 1:colcon.colcon_core.package_identification:_identify(joy_translate) by extension 'ignore_ament_install'
+[2.016s] Level 1:colcon.colcon_core.package_identification:_identify(joy_translate) by extensions ['colcon_pkg']
+[2.016s] Level 1:colcon.colcon_core.package_identification:_identify(joy_translate) by extension 'colcon_pkg'
+[2.016s] Level 1:colcon.colcon_core.package_identification:_identify(joy_translate) by extensions ['colcon_meta']
+[2.016s] Level 1:colcon.colcon_core.package_identification:_identify(joy_translate) by extension 'colcon_meta'
+[2.016s] Level 1:colcon.colcon_core.package_identification:_identify(joy_translate) by extensions ['ros']
+[2.016s] Level 1:colcon.colcon_core.package_identification:_identify(joy_translate) by extension 'ros'
+[2.019s] DEBUG:colcon.colcon_core.package_identification:Package 'joy_translate' with type 'ros.ament_python' and name 'joy_translate'
+[2.019s] Level 1:colcon.colcon_core.package_identification:_identify(libcreate) by extensions ['ignore', 'ignore_ament_install']
+[2.020s] Level 1:colcon.colcon_core.package_identification:_identify(libcreate) by extension 'ignore'
+[2.020s] Level 1:colcon.colcon_core.package_identification:_identify(libcreate) by extension 'ignore_ament_install'
+[2.020s] Level 1:colcon.colcon_core.package_identification:_identify(libcreate) by extensions ['colcon_pkg']
+[2.020s] Level 1:colcon.colcon_core.package_identification:_identify(libcreate) by extension 'colcon_pkg'
+[2.020s] Level 1:colcon.colcon_core.package_identification:_identify(libcreate) by extensions ['colcon_meta']
+[2.021s] Level 1:colcon.colcon_core.package_identification:_identify(libcreate) by extension 'colcon_meta'
+[2.021s] Level 1:colcon.colcon_core.package_identification:_identify(libcreate) by extensions ['ros']
+[2.021s] Level 1:colcon.colcon_core.package_identification:_identify(libcreate) by extension 'ros'
+[2.031s] DEBUG:colcon.colcon_core.package_identification:Package 'libcreate' with type 'ros.cmake' and name 'libcreate'
+[2.032s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[2.032s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[2.033s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[2.033s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[2.033s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[2.033s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[2.033s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[2.033s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[2.180s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[2.180s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[2.196s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 6 installed packages in /home/mkouda/create_ws/install
+[2.207s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 280 installed packages in /opt/ros/humble
+[2.214s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[2.392s] Level 5:colcon.colcon_core.verb:set package 'create_description' build argument 'cmake_args' from command line to 'None'
+[2.392s] Level 5:colcon.colcon_core.verb:set package 'create_description' build argument 'cmake_target' from command line to 'None'
+[2.392s] Level 5:colcon.colcon_core.verb:set package 'create_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.392s] Level 5:colcon.colcon_core.verb:set package 'create_description' build argument 'cmake_clean_cache' from command line to 'False'
+[2.392s] Level 5:colcon.colcon_core.verb:set package 'create_description' build argument 'cmake_clean_first' from command line to 'False'
+[2.392s] Level 5:colcon.colcon_core.verb:set package 'create_description' build argument 'cmake_force_configure' from command line to 'False'
+[2.393s] Level 5:colcon.colcon_core.verb:set package 'create_description' build argument 'ament_cmake_args' from command line to 'None'
+[2.393s] Level 5:colcon.colcon_core.verb:set package 'create_description' build argument 'catkin_cmake_args' from command line to 'None'
+[2.393s] Level 5:colcon.colcon_core.verb:set package 'create_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.393s] DEBUG:colcon.colcon_core.verb:Building package 'create_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mkouda/create_ws/src/build/create_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mkouda/create_ws/src/install/create_description', 'merge_install': False, 'path': '/home/mkouda/create_ws/src/create_robot/create_description', 'symlink_install': False, 'test_result_base': None}
+[2.394s] Level 5:colcon.colcon_core.verb:set package 'create_msgs' build argument 'cmake_args' from command line to 'None'
+[2.395s] Level 5:colcon.colcon_core.verb:set package 'create_msgs' build argument 'cmake_target' from command line to 'None'
+[2.395s] Level 5:colcon.colcon_core.verb:set package 'create_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.395s] Level 5:colcon.colcon_core.verb:set package 'create_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[2.395s] Level 5:colcon.colcon_core.verb:set package 'create_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[2.395s] Level 5:colcon.colcon_core.verb:set package 'create_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[2.395s] Level 5:colcon.colcon_core.verb:set package 'create_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[2.395s] Level 5:colcon.colcon_core.verb:set package 'create_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[2.395s] Level 5:colcon.colcon_core.verb:set package 'create_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.395s] DEBUG:colcon.colcon_core.verb:Building package 'create_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mkouda/create_ws/src/build/create_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mkouda/create_ws/src/install/create_msgs', 'merge_install': False, 'path': '/home/mkouda/create_ws/src/create_robot/create_msgs', 'symlink_install': False, 'test_result_base': None}
+[2.397s] Level 5:colcon.colcon_core.verb:set package 'joy_translate' build argument 'cmake_args' from command line to 'None'
+[2.397s] Level 5:colcon.colcon_core.verb:set package 'joy_translate' build argument 'cmake_target' from command line to 'None'
+[2.397s] Level 5:colcon.colcon_core.verb:set package 'joy_translate' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.397s] Level 5:colcon.colcon_core.verb:set package 'joy_translate' build argument 'cmake_clean_cache' from command line to 'False'
+[2.397s] Level 5:colcon.colcon_core.verb:set package 'joy_translate' build argument 'cmake_clean_first' from command line to 'False'
+[2.397s] Level 5:colcon.colcon_core.verb:set package 'joy_translate' build argument 'cmake_force_configure' from command line to 'False'
+[2.397s] Level 5:colcon.colcon_core.verb:set package 'joy_translate' build argument 'ament_cmake_args' from command line to 'None'
+[2.398s] Level 5:colcon.colcon_core.verb:set package 'joy_translate' build argument 'catkin_cmake_args' from command line to 'None'
+[2.398s] Level 5:colcon.colcon_core.verb:set package 'joy_translate' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.398s] DEBUG:colcon.colcon_core.verb:Building package 'joy_translate' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mkouda/create_ws/src/build/joy_translate', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mkouda/create_ws/src/install/joy_translate', 'merge_install': False, 'path': '/home/mkouda/create_ws/src/joy_translate', 'symlink_install': False, 'test_result_base': None}
+[2.399s] Level 5:colcon.colcon_core.verb:set package 'libcreate' build argument 'cmake_args' from command line to 'None'
+[2.399s] Level 5:colcon.colcon_core.verb:set package 'libcreate' build argument 'cmake_target' from command line to 'None'
+[2.400s] Level 5:colcon.colcon_core.verb:set package 'libcreate' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.400s] Level 5:colcon.colcon_core.verb:set package 'libcreate' build argument 'cmake_clean_cache' from command line to 'False'
+[2.400s] Level 5:colcon.colcon_core.verb:set package 'libcreate' build argument 'cmake_clean_first' from command line to 'False'
+[2.400s] Level 5:colcon.colcon_core.verb:set package 'libcreate' build argument 'cmake_force_configure' from command line to 'False'
+[2.400s] Level 5:colcon.colcon_core.verb:set package 'libcreate' build argument 'ament_cmake_args' from command line to 'None'
+[2.400s] Level 5:colcon.colcon_core.verb:set package 'libcreate' build argument 'catkin_cmake_args' from command line to 'None'
+[2.400s] Level 5:colcon.colcon_core.verb:set package 'libcreate' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.400s] DEBUG:colcon.colcon_core.verb:Building package 'libcreate' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mkouda/create_ws/src/build/libcreate', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mkouda/create_ws/src/install/libcreate', 'merge_install': False, 'path': '/home/mkouda/create_ws/src/libcreate', 'symlink_install': False, 'test_result_base': None}
+[2.402s] Level 5:colcon.colcon_core.verb:set package 'create_driver' build argument 'cmake_args' from command line to 'None'
+[2.402s] Level 5:colcon.colcon_core.verb:set package 'create_driver' build argument 'cmake_target' from command line to 'None'
+[2.402s] Level 5:colcon.colcon_core.verb:set package 'create_driver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.402s] Level 5:colcon.colcon_core.verb:set package 'create_driver' build argument 'cmake_clean_cache' from command line to 'False'
+[2.402s] Level 5:colcon.colcon_core.verb:set package 'create_driver' build argument 'cmake_clean_first' from command line to 'False'
+[2.402s] Level 5:colcon.colcon_core.verb:set package 'create_driver' build argument 'cmake_force_configure' from command line to 'False'
+[2.402s] Level 5:colcon.colcon_core.verb:set package 'create_driver' build argument 'ament_cmake_args' from command line to 'None'
+[2.402s] Level 5:colcon.colcon_core.verb:set package 'create_driver' build argument 'catkin_cmake_args' from command line to 'None'
+[2.402s] Level 5:colcon.colcon_core.verb:set package 'create_driver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.403s] DEBUG:colcon.colcon_core.verb:Building package 'create_driver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mkouda/create_ws/src/build/create_driver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mkouda/create_ws/src/install/create_driver', 'merge_install': False, 'path': '/home/mkouda/create_ws/src/create_robot/create_driver', 'symlink_install': False, 'test_result_base': None}
+[2.404s] Level 5:colcon.colcon_core.verb:set package 'create_bringup' build argument 'cmake_args' from command line to 'None'
+[2.404s] Level 5:colcon.colcon_core.verb:set package 'create_bringup' build argument 'cmake_target' from command line to 'None'
+[2.404s] Level 5:colcon.colcon_core.verb:set package 'create_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.404s] Level 5:colcon.colcon_core.verb:set package 'create_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[2.404s] Level 5:colcon.colcon_core.verb:set package 'create_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[2.405s] Level 5:colcon.colcon_core.verb:set package 'create_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[2.405s] Level 5:colcon.colcon_core.verb:set package 'create_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[2.405s] Level 5:colcon.colcon_core.verb:set package 'create_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[2.405s] Level 5:colcon.colcon_core.verb:set package 'create_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.405s] DEBUG:colcon.colcon_core.verb:Building package 'create_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mkouda/create_ws/src/build/create_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mkouda/create_ws/src/install/create_bringup', 'merge_install': False, 'path': '/home/mkouda/create_ws/src/create_robot/create_bringup', 'symlink_install': False, 'test_result_base': None}
+[2.406s] Level 5:colcon.colcon_core.verb:set package 'create_robot' build argument 'cmake_args' from command line to 'None'
+[2.407s] Level 5:colcon.colcon_core.verb:set package 'create_robot' build argument 'cmake_target' from command line to 'None'
+[2.407s] Level 5:colcon.colcon_core.verb:set package 'create_robot' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.407s] Level 5:colcon.colcon_core.verb:set package 'create_robot' build argument 'cmake_clean_cache' from command line to 'False'
+[2.407s] Level 5:colcon.colcon_core.verb:set package 'create_robot' build argument 'cmake_clean_first' from command line to 'False'
+[2.407s] Level 5:colcon.colcon_core.verb:set package 'create_robot' build argument 'cmake_force_configure' from command line to 'False'
+[2.407s] Level 5:colcon.colcon_core.verb:set package 'create_robot' build argument 'ament_cmake_args' from command line to 'None'
+[2.407s] Level 5:colcon.colcon_core.verb:set package 'create_robot' build argument 'catkin_cmake_args' from command line to 'None'
+[2.407s] Level 5:colcon.colcon_core.verb:set package 'create_robot' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.407s] DEBUG:colcon.colcon_core.verb:Building package 'create_robot' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mkouda/create_ws/src/build/create_robot', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mkouda/create_ws/src/install/create_robot', 'merge_install': False, 'path': '/home/mkouda/create_ws/src/create_robot/create_robot', 'symlink_install': False, 'test_result_base': None}
+[2.408s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[2.411s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[2.412s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mkouda/create_ws/src/create_robot/create_msgs' with build type 'ament_cmake'
+[2.413s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mkouda/create_ws/src/create_robot/create_msgs'
+[2.432s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[2.433s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.434s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.456s] INFO:colcon.colcon_ros.task.cmake.build:Building ROS package in '/home/mkouda/create_ws/src/libcreate' with build type 'cmake'
+[2.457s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mkouda/create_ws/src/libcreate'
+[2.458s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.459s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.479s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mkouda/create_ws/src/create_robot/create_description' with build type 'ament_cmake'
+[2.480s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mkouda/create_ws/src/create_robot/create_description'
+[2.481s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.482s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.502s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/mkouda/create_ws/src/joy_translate' with build type 'ament_python'
+[2.502s] Level 1:colcon.colcon_core.shell:create_environment_hook('joy_translate', 'ament_prefix_path')
+[2.504s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkouda/create_ws/src/install/joy_translate/share/joy_translate/hook/ament_prefix_path.ps1'
+[2.508s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mkouda/create_ws/src/install/joy_translate/share/joy_translate/hook/ament_prefix_path.dsv'
+[2.512s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkouda/create_ws/src/install/joy_translate/share/joy_translate/hook/ament_prefix_path.sh'
+[2.516s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.516s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.546s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mkouda/create_ws/src/build/create_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/mkouda/create_ws/src/create_robot/create_msgs -DCMAKE_INSTALL_PREFIX=/home/mkouda/create_ws/src/install/create_msgs
+[2.569s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mkouda/create_ws/src/build/libcreate': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/mkouda/create_ws/src/libcreate -DCMAKE_INSTALL_PREFIX=/home/mkouda/create_ws/src/install/libcreate
+[2.584s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mkouda/create_ws/src/build/create_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/mkouda/create_ws/src/create_robot/create_description -DCMAKE_INSTALL_PREFIX=/home/mkouda/create_ws/src/install/create_description
+[3.964s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/mkouda/create_ws/src/joy_translate'
+[3.965s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.966s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.578s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mkouda/create_ws/src/joy_translate': PYTHONPATH=/home/mkouda/create_ws/src/build/joy_translate/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mkouda/create_ws/src/install/joy_translate/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/joy_translate build --build-base /home/mkouda/create_ws/src/build/joy_translate/build install --record /home/mkouda/create_ws/src/build/joy_translate/install.log --single-version-externally-managed install_data
+[7.343s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mkouda/create_ws/src/build/libcreate' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/mkouda/create_ws/src/libcreate -DCMAKE_INSTALL_PREFIX=/home/mkouda/create_ws/src/install/libcreate
+[7.353s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mkouda/create_ws/src/build/libcreate': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/mkouda/create_ws/src/build/libcreate -- -j4 -l4
+[8.576s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mkouda/create_ws/src/build/create_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/mkouda/create_ws/src/create_robot/create_description -DCMAKE_INSTALL_PREFIX=/home/mkouda/create_ws/src/install/create_description
+[8.587s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mkouda/create_ws/src/build/create_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/mkouda/create_ws/src/build/create_description -- -j4 -l4
+[8.643s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mkouda/create_ws/src/joy_translate' returned '0': PYTHONPATH=/home/mkouda/create_ws/src/build/joy_translate/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mkouda/create_ws/src/install/joy_translate/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/joy_translate build --build-base /home/mkouda/create_ws/src/build/joy_translate/build install --record /home/mkouda/create_ws/src/build/joy_translate/install.log --single-version-externally-managed install_data
+[8.697s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/joy_translate' for CMake module files
+[8.701s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/joy_translate' for CMake config files
+[8.705s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/joy_translate/lib'
+[8.706s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/joy_translate/bin'
+[8.706s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/joy_translate/lib/pkgconfig/joy_translate.pc'
+[8.707s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/joy_translate/lib/python3.10/site-packages'
+[8.708s] Level 1:colcon.colcon_core.shell:create_environment_hook('joy_translate', 'pythonpath')
+[8.709s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkouda/create_ws/src/install/joy_translate/share/joy_translate/hook/pythonpath.ps1'
+[8.711s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mkouda/create_ws/src/install/joy_translate/share/joy_translate/hook/pythonpath.dsv'
+[8.713s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkouda/create_ws/src/install/joy_translate/share/joy_translate/hook/pythonpath.sh'
+[8.717s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/joy_translate/bin'
+[8.717s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(joy_translate)
+[8.719s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/joy_translate/share/joy_translate/package.ps1'
+[8.725s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mkouda/create_ws/src/install/joy_translate/share/joy_translate/package.dsv'
+[8.735s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/joy_translate/share/joy_translate/package.sh'
+[8.751s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/joy_translate/share/joy_translate/package.bash'
+[8.760s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/joy_translate/share/joy_translate/package.zsh'
+[8.766s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mkouda/create_ws/src/install/joy_translate/share/colcon-core/packages/joy_translate)
+[8.803s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mkouda/create_ws/src/build/create_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/mkouda/create_ws/src/build/create_description -- -j4 -l4
+[8.870s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mkouda/create_ws/src/build/create_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/mkouda/create_ws/src/build/create_description
+[9.059s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(create_description)
+[9.060s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_description' for CMake module files
+[9.063s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_description' for CMake config files
+[9.067s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mkouda/create_ws/src/build/create_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/mkouda/create_ws/src/build/create_description
+[9.068s] Level 1:colcon.colcon_core.shell:create_environment_hook('create_description', 'cmake_prefix_path')
+[9.069s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkouda/create_ws/src/install/create_description/share/create_description/hook/cmake_prefix_path.ps1'
+[9.071s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mkouda/create_ws/src/install/create_description/share/create_description/hook/cmake_prefix_path.dsv'
+[9.073s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkouda/create_ws/src/install/create_description/share/create_description/hook/cmake_prefix_path.sh'
+[9.077s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_description/bin'
+[9.077s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_description/lib/pkgconfig/create_description.pc'
+[9.078s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_description/lib/python3.10/site-packages'
+[9.080s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_description/bin'
+[9.081s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_description/share/create_description/package.ps1'
+[9.084s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mkouda/create_ws/src/install/create_description/share/create_description/package.dsv'
+[9.087s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_description/share/create_description/package.sh'
+[9.089s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_description/share/create_description/package.bash'
+[9.090s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_description/share/create_description/package.zsh'
+[9.092s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mkouda/create_ws/src/install/create_description/share/colcon-core/packages/create_description)
+[9.096s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(create_description)
+[9.097s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_description' for CMake module files
+[9.099s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_description' for CMake config files
+[9.102s] Level 1:colcon.colcon_core.shell:create_environment_hook('create_description', 'cmake_prefix_path')
+[9.104s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkouda/create_ws/src/install/create_description/share/create_description/hook/cmake_prefix_path.ps1'
+[9.106s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mkouda/create_ws/src/install/create_description/share/create_description/hook/cmake_prefix_path.dsv'
+[9.108s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkouda/create_ws/src/install/create_description/share/create_description/hook/cmake_prefix_path.sh'
+[9.110s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_description/bin'
+[9.111s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_description/lib/pkgconfig/create_description.pc'
+[9.112s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_description/lib/python3.10/site-packages'
+[9.113s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_description/bin'
+[9.114s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_description/share/create_description/package.ps1'
+[9.116s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mkouda/create_ws/src/install/create_description/share/create_description/package.dsv'
+[9.169s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_description/share/create_description/package.sh'
+[9.174s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_description/share/create_description/package.bash'
+[9.178s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_description/share/create_description/package.zsh'
+[9.182s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mkouda/create_ws/src/install/create_description/share/colcon-core/packages/create_description)
+[21.184s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mkouda/create_ws/src/build/create_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/mkouda/create_ws/src/create_robot/create_msgs -DCMAKE_INSTALL_PREFIX=/home/mkouda/create_ws/src/install/create_msgs
+[21.193s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mkouda/create_ws/src/build/create_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/mkouda/create_ws/src/build/create_msgs -- -j4 -l4
+[99.348s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mkouda/create_ws/src/build/create_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/mkouda/create_ws/src/build/create_msgs -- -j4 -l4
+[99.357s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mkouda/create_ws/src/build/create_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/mkouda/create_ws/src/build/create_msgs
+[99.998s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(create_msgs)
+[99.999s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_msgs' for CMake module files
+[100.001s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mkouda/create_ws/src/build/create_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/mkouda/create_ws/src/build/create_msgs
+[100.005s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_msgs' for CMake config files
+[100.013s] Level 1:colcon.colcon_core.shell:create_environment_hook('create_msgs', 'cmake_prefix_path')
+[100.014s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkouda/create_ws/src/install/create_msgs/share/create_msgs/hook/cmake_prefix_path.ps1'
+[100.016s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mkouda/create_ws/src/install/create_msgs/share/create_msgs/hook/cmake_prefix_path.dsv'
+[100.018s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkouda/create_ws/src/install/create_msgs/share/create_msgs/hook/cmake_prefix_path.sh'
+[100.021s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_msgs/lib'
+[100.022s] Level 1:colcon.colcon_core.shell:create_environment_hook('create_msgs', 'ld_library_path_lib')
+[100.023s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkouda/create_ws/src/install/create_msgs/share/create_msgs/hook/ld_library_path_lib.ps1'
+[100.026s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mkouda/create_ws/src/install/create_msgs/share/create_msgs/hook/ld_library_path_lib.dsv'
+[100.027s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkouda/create_ws/src/install/create_msgs/share/create_msgs/hook/ld_library_path_lib.sh'
+[100.030s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_msgs/bin'
+[100.030s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_msgs/lib/pkgconfig/create_msgs.pc'
+[100.031s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_msgs/lib/python3.10/site-packages'
+[100.033s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_msgs/bin'
+[100.034s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_msgs/share/create_msgs/package.ps1'
+[100.037s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mkouda/create_ws/src/install/create_msgs/share/create_msgs/package.dsv'
+[100.039s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_msgs/share/create_msgs/package.sh'
+[100.042s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_msgs/share/create_msgs/package.bash'
+[100.044s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_msgs/share/create_msgs/package.zsh'
+[100.046s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mkouda/create_ws/src/install/create_msgs/share/colcon-core/packages/create_msgs)
+[100.050s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(create_msgs)
+[100.051s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_msgs' for CMake module files
+[100.056s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_msgs' for CMake config files
+[100.063s] Level 1:colcon.colcon_core.shell:create_environment_hook('create_msgs', 'cmake_prefix_path')
+[100.064s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkouda/create_ws/src/install/create_msgs/share/create_msgs/hook/cmake_prefix_path.ps1'
+[100.067s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mkouda/create_ws/src/install/create_msgs/share/create_msgs/hook/cmake_prefix_path.dsv'
+[100.069s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkouda/create_ws/src/install/create_msgs/share/create_msgs/hook/cmake_prefix_path.sh'
+[100.073s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_msgs/lib'
+[100.074s] Level 1:colcon.colcon_core.shell:create_environment_hook('create_msgs', 'ld_library_path_lib')
+[100.075s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkouda/create_ws/src/install/create_msgs/share/create_msgs/hook/ld_library_path_lib.ps1'
+[100.077s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mkouda/create_ws/src/install/create_msgs/share/create_msgs/hook/ld_library_path_lib.dsv'
+[100.080s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkouda/create_ws/src/install/create_msgs/share/create_msgs/hook/ld_library_path_lib.sh'
+[100.083s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_msgs/bin'
+[100.083s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_msgs/lib/pkgconfig/create_msgs.pc'
+[100.084s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_msgs/lib/python3.10/site-packages'
+[100.085s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_msgs/bin'
+[100.087s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_msgs/share/create_msgs/package.ps1'
+[100.091s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mkouda/create_ws/src/install/create_msgs/share/create_msgs/package.dsv'
+[100.094s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_msgs/share/create_msgs/package.sh'
+[100.097s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_msgs/share/create_msgs/package.bash'
+[100.099s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_msgs/share/create_msgs/package.zsh'
+[100.102s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mkouda/create_ws/src/install/create_msgs/share/colcon-core/packages/create_msgs)
+[115.140s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mkouda/create_ws/src/build/libcreate' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/mkouda/create_ws/src/build/libcreate -- -j4 -l4
+[115.149s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mkouda/create_ws/src/build/libcreate': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/mkouda/create_ws/src/build/libcreate
+[115.213s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mkouda/create_ws/src/build/libcreate' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/mkouda/create_ws/src/build/libcreate
+[115.214s] Level 1:colcon.colcon_core.shell:create_environment_hook('libcreate', 'pkg_config_path')
+[115.215s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkouda/create_ws/src/install/libcreate/share/libcreate/hook/pkg_config_path.ps1'
+[115.217s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mkouda/create_ws/src/install/libcreate/share/libcreate/hook/pkg_config_path.dsv'
+[115.218s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkouda/create_ws/src/install/libcreate/share/libcreate/hook/pkg_config_path.sh'
+[115.233s] Level 1:colcon.colcon_core.shell:create_environment_hook('libcreate', 'pkg_config_path_multiarch')
+[115.234s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkouda/create_ws/src/install/libcreate/share/libcreate/hook/pkg_config_path_multiarch.ps1'
+[115.236s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mkouda/create_ws/src/install/libcreate/share/libcreate/hook/pkg_config_path_multiarch.dsv'
+[115.237s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkouda/create_ws/src/install/libcreate/share/libcreate/hook/pkg_config_path_multiarch.sh'
+[115.239s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(libcreate)
+[115.240s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/libcreate' for CMake module files
+[115.243s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/libcreate' for CMake config files
+[115.243s] Level 1:colcon.colcon_core.shell:create_environment_hook('libcreate', 'cmake_prefix_path')
+[115.244s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkouda/create_ws/src/install/libcreate/share/libcreate/hook/cmake_prefix_path.ps1'
+[115.246s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mkouda/create_ws/src/install/libcreate/share/libcreate/hook/cmake_prefix_path.dsv'
+[115.248s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkouda/create_ws/src/install/libcreate/share/libcreate/hook/cmake_prefix_path.sh'
+[115.251s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/libcreate/lib'
+[115.252s] Level 1:colcon.colcon_core.shell:create_environment_hook('libcreate', 'ld_library_path_lib')
+[115.253s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkouda/create_ws/src/install/libcreate/share/libcreate/hook/ld_library_path_lib.ps1'
+[115.255s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mkouda/create_ws/src/install/libcreate/share/libcreate/hook/ld_library_path_lib.dsv'
+[115.256s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkouda/create_ws/src/install/libcreate/share/libcreate/hook/ld_library_path_lib.sh'
+[115.258s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/libcreate/bin'
+[115.259s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/libcreate/lib/pkgconfig/libcreate.pc'
+[115.259s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/libcreate/lib/python3.10/site-packages'
+[115.260s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/libcreate/bin'
+[115.262s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/libcreate/share/libcreate/package.ps1'
+[115.264s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mkouda/create_ws/src/install/libcreate/share/libcreate/package.dsv'
+[115.266s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/libcreate/share/libcreate/package.sh'
+[115.268s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/libcreate/share/libcreate/package.bash'
+[115.270s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/libcreate/share/libcreate/package.zsh'
+[115.271s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mkouda/create_ws/src/install/libcreate/share/colcon-core/packages/libcreate)
+[115.273s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mkouda/create_ws/src/create_robot/create_driver' with build type 'ament_cmake'
+[115.273s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mkouda/create_ws/src/create_robot/create_driver'
+[115.275s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[115.275s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[115.336s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mkouda/create_ws/src/build/create_driver': AMENT_PREFIX_PATH=/home/mkouda/create_ws/src/install/create_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mkouda/create_ws/src/install/libcreate:/home/mkouda/create_ws/src/install/create_msgs:/home/mkouda/create_ws/install/create_robot:/home/mkouda/create_ws/install/create_bringup:/home/mkouda/create_ws/install/create_driver:/home/mkouda/create_ws/install/libcreate:/home/mkouda/create_ws/install/create_msgs:/home/mkouda/create_ws/install/create_description:/opt/ros/humble LD_LIBRARY_PATH=/home/mkouda/create_ws/src/install/libcreate/lib:/home/mkouda/create_ws/src/install/create_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/mkouda/create_ws/src/install/libcreate/lib/aarch64-linux-gnu/pkgconfig:/home/mkouda/create_ws/src/install/libcreate/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/mkouda/create_ws/src/install/create_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/mkouda/create_ws/src/create_robot/create_driver -DCMAKE_INSTALL_PREFIX=/home/mkouda/create_ws/src/install/create_driver
+[124.643s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mkouda/create_ws/src/build/create_driver' returned '0': AMENT_PREFIX_PATH=/home/mkouda/create_ws/src/install/create_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mkouda/create_ws/src/install/libcreate:/home/mkouda/create_ws/src/install/create_msgs:/home/mkouda/create_ws/install/create_robot:/home/mkouda/create_ws/install/create_bringup:/home/mkouda/create_ws/install/create_driver:/home/mkouda/create_ws/install/libcreate:/home/mkouda/create_ws/install/create_msgs:/home/mkouda/create_ws/install/create_description:/opt/ros/humble LD_LIBRARY_PATH=/home/mkouda/create_ws/src/install/libcreate/lib:/home/mkouda/create_ws/src/install/create_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/mkouda/create_ws/src/install/libcreate/lib/aarch64-linux-gnu/pkgconfig:/home/mkouda/create_ws/src/install/libcreate/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/mkouda/create_ws/src/install/create_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/mkouda/create_ws/src/create_robot/create_driver -DCMAKE_INSTALL_PREFIX=/home/mkouda/create_ws/src/install/create_driver
+[124.652s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mkouda/create_ws/src/build/create_driver': AMENT_PREFIX_PATH=/home/mkouda/create_ws/src/install/create_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mkouda/create_ws/src/install/libcreate:/home/mkouda/create_ws/src/install/create_msgs:/home/mkouda/create_ws/install/create_robot:/home/mkouda/create_ws/install/create_bringup:/home/mkouda/create_ws/install/create_driver:/home/mkouda/create_ws/install/libcreate:/home/mkouda/create_ws/install/create_msgs:/home/mkouda/create_ws/install/create_description:/opt/ros/humble LD_LIBRARY_PATH=/home/mkouda/create_ws/src/install/libcreate/lib:/home/mkouda/create_ws/src/install/create_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/mkouda/create_ws/src/install/libcreate/lib/aarch64-linux-gnu/pkgconfig:/home/mkouda/create_ws/src/install/libcreate/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/mkouda/create_ws/src/install/create_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/mkouda/create_ws/src/build/create_driver -- -j4 -l4
+[257.590s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mkouda/create_ws/src/build/create_driver' returned '0': AMENT_PREFIX_PATH=/home/mkouda/create_ws/src/install/create_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mkouda/create_ws/src/install/libcreate:/home/mkouda/create_ws/src/install/create_msgs:/home/mkouda/create_ws/install/create_robot:/home/mkouda/create_ws/install/create_bringup:/home/mkouda/create_ws/install/create_driver:/home/mkouda/create_ws/install/libcreate:/home/mkouda/create_ws/install/create_msgs:/home/mkouda/create_ws/install/create_description:/opt/ros/humble LD_LIBRARY_PATH=/home/mkouda/create_ws/src/install/libcreate/lib:/home/mkouda/create_ws/src/install/create_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/mkouda/create_ws/src/install/libcreate/lib/aarch64-linux-gnu/pkgconfig:/home/mkouda/create_ws/src/install/libcreate/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/mkouda/create_ws/src/install/create_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/mkouda/create_ws/src/build/create_driver -- -j4 -l4
+[257.603s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mkouda/create_ws/src/build/create_driver': AMENT_PREFIX_PATH=/home/mkouda/create_ws/src/install/create_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mkouda/create_ws/src/install/libcreate:/home/mkouda/create_ws/src/install/create_msgs:/home/mkouda/create_ws/install/create_robot:/home/mkouda/create_ws/install/create_bringup:/home/mkouda/create_ws/install/create_driver:/home/mkouda/create_ws/install/libcreate:/home/mkouda/create_ws/install/create_msgs:/home/mkouda/create_ws/install/create_description:/opt/ros/humble LD_LIBRARY_PATH=/home/mkouda/create_ws/src/install/libcreate/lib:/home/mkouda/create_ws/src/install/create_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/mkouda/create_ws/src/install/libcreate/lib/aarch64-linux-gnu/pkgconfig:/home/mkouda/create_ws/src/install/libcreate/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/mkouda/create_ws/src/install/create_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/mkouda/create_ws/src/build/create_driver
+[257.787s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(create_driver)
+[257.789s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_driver' for CMake module files
+[257.791s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mkouda/create_ws/src/build/create_driver' returned '0': AMENT_PREFIX_PATH=/home/mkouda/create_ws/src/install/create_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mkouda/create_ws/src/install/libcreate:/home/mkouda/create_ws/src/install/create_msgs:/home/mkouda/create_ws/install/create_robot:/home/mkouda/create_ws/install/create_bringup:/home/mkouda/create_ws/install/create_driver:/home/mkouda/create_ws/install/libcreate:/home/mkouda/create_ws/install/create_msgs:/home/mkouda/create_ws/install/create_description:/opt/ros/humble LD_LIBRARY_PATH=/home/mkouda/create_ws/src/install/libcreate/lib:/home/mkouda/create_ws/src/install/create_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/mkouda/create_ws/src/install/libcreate/lib/aarch64-linux-gnu/pkgconfig:/home/mkouda/create_ws/src/install/libcreate/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/mkouda/create_ws/src/install/create_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/mkouda/create_ws/src/build/create_driver
+[257.793s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_driver' for CMake config files
+[257.795s] Level 1:colcon.colcon_core.shell:create_environment_hook('create_driver', 'cmake_prefix_path')
+[257.796s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkouda/create_ws/src/install/create_driver/share/create_driver/hook/cmake_prefix_path.ps1'
+[257.799s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mkouda/create_ws/src/install/create_driver/share/create_driver/hook/cmake_prefix_path.dsv'
+[257.800s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkouda/create_ws/src/install/create_driver/share/create_driver/hook/cmake_prefix_path.sh'
+[257.803s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_driver/lib'
+[257.803s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_driver/bin'
+[257.804s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_driver/lib/pkgconfig/create_driver.pc'
+[257.805s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_driver/lib/python3.10/site-packages'
+[257.805s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_driver/bin'
+[257.807s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_driver/share/create_driver/package.ps1'
+[257.809s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mkouda/create_ws/src/install/create_driver/share/create_driver/package.dsv'
+[257.811s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_driver/share/create_driver/package.sh'
+[257.812s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_driver/share/create_driver/package.bash'
+[257.814s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_driver/share/create_driver/package.zsh'
+[257.816s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mkouda/create_ws/src/install/create_driver/share/colcon-core/packages/create_driver)
+[257.818s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(create_driver)
+[257.819s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_driver' for CMake module files
+[257.822s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_driver' for CMake config files
+[257.824s] Level 1:colcon.colcon_core.shell:create_environment_hook('create_driver', 'cmake_prefix_path')
+[257.825s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkouda/create_ws/src/install/create_driver/share/create_driver/hook/cmake_prefix_path.ps1'
+[257.827s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mkouda/create_ws/src/install/create_driver/share/create_driver/hook/cmake_prefix_path.dsv'
+[257.829s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkouda/create_ws/src/install/create_driver/share/create_driver/hook/cmake_prefix_path.sh'
+[257.831s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_driver/lib'
+[257.832s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_driver/bin'
+[257.832s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_driver/lib/pkgconfig/create_driver.pc'
+[257.833s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_driver/lib/python3.10/site-packages'
+[257.833s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_driver/bin'
+[257.835s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_driver/share/create_driver/package.ps1'
+[257.837s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mkouda/create_ws/src/install/create_driver/share/create_driver/package.dsv'
+[257.839s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_driver/share/create_driver/package.sh'
+[257.841s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_driver/share/create_driver/package.bash'
+[257.843s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_driver/share/create_driver/package.zsh'
+[257.845s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mkouda/create_ws/src/install/create_driver/share/colcon-core/packages/create_driver)
+[257.847s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mkouda/create_ws/src/create_robot/create_bringup' with build type 'ament_cmake'
+[257.848s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mkouda/create_ws/src/create_robot/create_bringup'
+[257.849s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[257.849s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[257.941s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mkouda/create_ws/src/build/create_bringup': AMENT_PREFIX_PATH=/home/mkouda/create_ws/src/install/create_driver:/home/mkouda/create_ws/src/install/create_msgs:/home/mkouda/create_ws/src/install/create_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mkouda/create_ws/src/install/create_driver:/home/mkouda/create_ws/src/install/libcreate:/home/mkouda/create_ws/src/install/create_msgs:/home/mkouda/create_ws/src/install/create_description:/home/mkouda/create_ws/install/create_robot:/home/mkouda/create_ws/install/create_bringup:/home/mkouda/create_ws/install/create_driver:/home/mkouda/create_ws/install/libcreate:/home/mkouda/create_ws/install/create_msgs:/home/mkouda/create_ws/install/create_description:/opt/ros/humble LD_LIBRARY_PATH=/home/mkouda/create_ws/src/install/libcreate/lib:/home/mkouda/create_ws/src/install/create_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/mkouda/create_ws/src/install/libcreate/lib/aarch64-linux-gnu/pkgconfig:/home/mkouda/create_ws/src/install/libcreate/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/mkouda/create_ws/src/install/create_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/mkouda/create_ws/src/create_robot/create_bringup -DCMAKE_INSTALL_PREFIX=/home/mkouda/create_ws/src/install/create_bringup
+[261.232s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mkouda/create_ws/src/build/create_bringup' returned '0': AMENT_PREFIX_PATH=/home/mkouda/create_ws/src/install/create_driver:/home/mkouda/create_ws/src/install/create_msgs:/home/mkouda/create_ws/src/install/create_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mkouda/create_ws/src/install/create_driver:/home/mkouda/create_ws/src/install/libcreate:/home/mkouda/create_ws/src/install/create_msgs:/home/mkouda/create_ws/src/install/create_description:/home/mkouda/create_ws/install/create_robot:/home/mkouda/create_ws/install/create_bringup:/home/mkouda/create_ws/install/create_driver:/home/mkouda/create_ws/install/libcreate:/home/mkouda/create_ws/install/create_msgs:/home/mkouda/create_ws/install/create_description:/opt/ros/humble LD_LIBRARY_PATH=/home/mkouda/create_ws/src/install/libcreate/lib:/home/mkouda/create_ws/src/install/create_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/mkouda/create_ws/src/install/libcreate/lib/aarch64-linux-gnu/pkgconfig:/home/mkouda/create_ws/src/install/libcreate/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/mkouda/create_ws/src/install/create_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/mkouda/create_ws/src/create_robot/create_bringup -DCMAKE_INSTALL_PREFIX=/home/mkouda/create_ws/src/install/create_bringup
+[261.240s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mkouda/create_ws/src/build/create_bringup': AMENT_PREFIX_PATH=/home/mkouda/create_ws/src/install/create_driver:/home/mkouda/create_ws/src/install/create_msgs:/home/mkouda/create_ws/src/install/create_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mkouda/create_ws/src/install/create_driver:/home/mkouda/create_ws/src/install/libcreate:/home/mkouda/create_ws/src/install/create_msgs:/home/mkouda/create_ws/src/install/create_description:/home/mkouda/create_ws/install/create_robot:/home/mkouda/create_ws/install/create_bringup:/home/mkouda/create_ws/install/create_driver:/home/mkouda/create_ws/install/libcreate:/home/mkouda/create_ws/install/create_msgs:/home/mkouda/create_ws/install/create_description:/opt/ros/humble LD_LIBRARY_PATH=/home/mkouda/create_ws/src/install/libcreate/lib:/home/mkouda/create_ws/src/install/create_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/mkouda/create_ws/src/install/libcreate/lib/aarch64-linux-gnu/pkgconfig:/home/mkouda/create_ws/src/install/libcreate/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/mkouda/create_ws/src/install/create_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/mkouda/create_ws/src/build/create_bringup -- -j4 -l4
+[261.401s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mkouda/create_ws/src/build/create_bringup' returned '0': AMENT_PREFIX_PATH=/home/mkouda/create_ws/src/install/create_driver:/home/mkouda/create_ws/src/install/create_msgs:/home/mkouda/create_ws/src/install/create_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mkouda/create_ws/src/install/create_driver:/home/mkouda/create_ws/src/install/libcreate:/home/mkouda/create_ws/src/install/create_msgs:/home/mkouda/create_ws/src/install/create_description:/home/mkouda/create_ws/install/create_robot:/home/mkouda/create_ws/install/create_bringup:/home/mkouda/create_ws/install/create_driver:/home/mkouda/create_ws/install/libcreate:/home/mkouda/create_ws/install/create_msgs:/home/mkouda/create_ws/install/create_description:/opt/ros/humble LD_LIBRARY_PATH=/home/mkouda/create_ws/src/install/libcreate/lib:/home/mkouda/create_ws/src/install/create_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/mkouda/create_ws/src/install/libcreate/lib/aarch64-linux-gnu/pkgconfig:/home/mkouda/create_ws/src/install/libcreate/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/mkouda/create_ws/src/install/create_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/mkouda/create_ws/src/build/create_bringup -- -j4 -l4
+[261.411s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mkouda/create_ws/src/build/create_bringup': AMENT_PREFIX_PATH=/home/mkouda/create_ws/src/install/create_driver:/home/mkouda/create_ws/src/install/create_msgs:/home/mkouda/create_ws/src/install/create_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mkouda/create_ws/src/install/create_driver:/home/mkouda/create_ws/src/install/libcreate:/home/mkouda/create_ws/src/install/create_msgs:/home/mkouda/create_ws/src/install/create_description:/home/mkouda/create_ws/install/create_robot:/home/mkouda/create_ws/install/create_bringup:/home/mkouda/create_ws/install/create_driver:/home/mkouda/create_ws/install/libcreate:/home/mkouda/create_ws/install/create_msgs:/home/mkouda/create_ws/install/create_description:/opt/ros/humble LD_LIBRARY_PATH=/home/mkouda/create_ws/src/install/libcreate/lib:/home/mkouda/create_ws/src/install/create_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/mkouda/create_ws/src/install/libcreate/lib/aarch64-linux-gnu/pkgconfig:/home/mkouda/create_ws/src/install/libcreate/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/mkouda/create_ws/src/install/create_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/mkouda/create_ws/src/build/create_bringup
+[261.500s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(create_bringup)
+[261.501s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_bringup' for CMake module files
+[261.502s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mkouda/create_ws/src/build/create_bringup' returned '0': AMENT_PREFIX_PATH=/home/mkouda/create_ws/src/install/create_driver:/home/mkouda/create_ws/src/install/create_msgs:/home/mkouda/create_ws/src/install/create_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mkouda/create_ws/src/install/create_driver:/home/mkouda/create_ws/src/install/libcreate:/home/mkouda/create_ws/src/install/create_msgs:/home/mkouda/create_ws/src/install/create_description:/home/mkouda/create_ws/install/create_robot:/home/mkouda/create_ws/install/create_bringup:/home/mkouda/create_ws/install/create_driver:/home/mkouda/create_ws/install/libcreate:/home/mkouda/create_ws/install/create_msgs:/home/mkouda/create_ws/install/create_description:/opt/ros/humble LD_LIBRARY_PATH=/home/mkouda/create_ws/src/install/libcreate/lib:/home/mkouda/create_ws/src/install/create_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/mkouda/create_ws/src/install/libcreate/lib/aarch64-linux-gnu/pkgconfig:/home/mkouda/create_ws/src/install/libcreate/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/mkouda/create_ws/src/install/create_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/mkouda/create_ws/src/build/create_bringup
+[261.505s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_bringup' for CMake config files
+[261.507s] Level 1:colcon.colcon_core.shell:create_environment_hook('create_bringup', 'cmake_prefix_path')
+[261.508s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkouda/create_ws/src/install/create_bringup/share/create_bringup/hook/cmake_prefix_path.ps1'
+[261.511s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mkouda/create_ws/src/install/create_bringup/share/create_bringup/hook/cmake_prefix_path.dsv'
+[261.512s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkouda/create_ws/src/install/create_bringup/share/create_bringup/hook/cmake_prefix_path.sh'
+[261.515s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_bringup/bin'
+[261.516s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_bringup/lib/pkgconfig/create_bringup.pc'
+[261.517s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_bringup/lib/python3.10/site-packages'
+[261.517s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_bringup/bin'
+[261.519s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_bringup/share/create_bringup/package.ps1'
+[261.521s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mkouda/create_ws/src/install/create_bringup/share/create_bringup/package.dsv'
+[261.522s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_bringup/share/create_bringup/package.sh'
+[261.524s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_bringup/share/create_bringup/package.bash'
+[261.526s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_bringup/share/create_bringup/package.zsh'
+[261.527s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mkouda/create_ws/src/install/create_bringup/share/colcon-core/packages/create_bringup)
+[261.530s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(create_bringup)
+[261.531s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_bringup' for CMake module files
+[261.533s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_bringup' for CMake config files
+[261.535s] Level 1:colcon.colcon_core.shell:create_environment_hook('create_bringup', 'cmake_prefix_path')
+[261.536s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkouda/create_ws/src/install/create_bringup/share/create_bringup/hook/cmake_prefix_path.ps1'
+[261.538s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mkouda/create_ws/src/install/create_bringup/share/create_bringup/hook/cmake_prefix_path.dsv'
+[261.540s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkouda/create_ws/src/install/create_bringup/share/create_bringup/hook/cmake_prefix_path.sh'
+[261.542s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_bringup/bin'
+[261.543s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_bringup/lib/pkgconfig/create_bringup.pc'
+[261.544s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_bringup/lib/python3.10/site-packages'
+[261.544s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_bringup/bin'
+[261.545s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_bringup/share/create_bringup/package.ps1'
+[261.548s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mkouda/create_ws/src/install/create_bringup/share/create_bringup/package.dsv'
+[261.550s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_bringup/share/create_bringup/package.sh'
+[261.552s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_bringup/share/create_bringup/package.bash'
+[261.554s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_bringup/share/create_bringup/package.zsh'
+[261.556s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mkouda/create_ws/src/install/create_bringup/share/colcon-core/packages/create_bringup)
+[261.558s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mkouda/create_ws/src/create_robot/create_robot' with build type 'ament_cmake'
+[261.558s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mkouda/create_ws/src/create_robot/create_robot'
+[261.559s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[261.559s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[261.629s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mkouda/create_ws/src/build/create_robot': AMENT_PREFIX_PATH=/home/mkouda/create_ws/src/install/create_bringup:/home/mkouda/create_ws/src/install/create_driver:/home/mkouda/create_ws/src/install/create_msgs:/home/mkouda/create_ws/src/install/create_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mkouda/create_ws/src/install/create_bringup:/home/mkouda/create_ws/src/install/create_driver:/home/mkouda/create_ws/src/install/libcreate:/home/mkouda/create_ws/src/install/create_msgs:/home/mkouda/create_ws/src/install/create_description:/home/mkouda/create_ws/install/create_robot:/home/mkouda/create_ws/install/create_bringup:/home/mkouda/create_ws/install/create_driver:/home/mkouda/create_ws/install/libcreate:/home/mkouda/create_ws/install/create_msgs:/home/mkouda/create_ws/install/create_description:/opt/ros/humble LD_LIBRARY_PATH=/home/mkouda/create_ws/src/install/libcreate/lib:/home/mkouda/create_ws/src/install/create_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/mkouda/create_ws/src/install/libcreate/lib/aarch64-linux-gnu/pkgconfig:/home/mkouda/create_ws/src/install/libcreate/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/mkouda/create_ws/src/install/create_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/mkouda/create_ws/src/create_robot/create_robot -DCMAKE_INSTALL_PREFIX=/home/mkouda/create_ws/src/install/create_robot
+[264.704s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mkouda/create_ws/src/build/create_robot' returned '0': AMENT_PREFIX_PATH=/home/mkouda/create_ws/src/install/create_bringup:/home/mkouda/create_ws/src/install/create_driver:/home/mkouda/create_ws/src/install/create_msgs:/home/mkouda/create_ws/src/install/create_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mkouda/create_ws/src/install/create_bringup:/home/mkouda/create_ws/src/install/create_driver:/home/mkouda/create_ws/src/install/libcreate:/home/mkouda/create_ws/src/install/create_msgs:/home/mkouda/create_ws/src/install/create_description:/home/mkouda/create_ws/install/create_robot:/home/mkouda/create_ws/install/create_bringup:/home/mkouda/create_ws/install/create_driver:/home/mkouda/create_ws/install/libcreate:/home/mkouda/create_ws/install/create_msgs:/home/mkouda/create_ws/install/create_description:/opt/ros/humble LD_LIBRARY_PATH=/home/mkouda/create_ws/src/install/libcreate/lib:/home/mkouda/create_ws/src/install/create_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/mkouda/create_ws/src/install/libcreate/lib/aarch64-linux-gnu/pkgconfig:/home/mkouda/create_ws/src/install/libcreate/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/mkouda/create_ws/src/install/create_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/mkouda/create_ws/src/create_robot/create_robot -DCMAKE_INSTALL_PREFIX=/home/mkouda/create_ws/src/install/create_robot
+[264.712s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mkouda/create_ws/src/build/create_robot': AMENT_PREFIX_PATH=/home/mkouda/create_ws/src/install/create_bringup:/home/mkouda/create_ws/src/install/create_driver:/home/mkouda/create_ws/src/install/create_msgs:/home/mkouda/create_ws/src/install/create_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mkouda/create_ws/src/install/create_bringup:/home/mkouda/create_ws/src/install/create_driver:/home/mkouda/create_ws/src/install/libcreate:/home/mkouda/create_ws/src/install/create_msgs:/home/mkouda/create_ws/src/install/create_description:/home/mkouda/create_ws/install/create_robot:/home/mkouda/create_ws/install/create_bringup:/home/mkouda/create_ws/install/create_driver:/home/mkouda/create_ws/install/libcreate:/home/mkouda/create_ws/install/create_msgs:/home/mkouda/create_ws/install/create_description:/opt/ros/humble LD_LIBRARY_PATH=/home/mkouda/create_ws/src/install/libcreate/lib:/home/mkouda/create_ws/src/install/create_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/mkouda/create_ws/src/install/libcreate/lib/aarch64-linux-gnu/pkgconfig:/home/mkouda/create_ws/src/install/libcreate/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/mkouda/create_ws/src/install/create_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/mkouda/create_ws/src/build/create_robot -- -j4 -l4
+[264.876s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mkouda/create_ws/src/build/create_robot' returned '0': AMENT_PREFIX_PATH=/home/mkouda/create_ws/src/install/create_bringup:/home/mkouda/create_ws/src/install/create_driver:/home/mkouda/create_ws/src/install/create_msgs:/home/mkouda/create_ws/src/install/create_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mkouda/create_ws/src/install/create_bringup:/home/mkouda/create_ws/src/install/create_driver:/home/mkouda/create_ws/src/install/libcreate:/home/mkouda/create_ws/src/install/create_msgs:/home/mkouda/create_ws/src/install/create_description:/home/mkouda/create_ws/install/create_robot:/home/mkouda/create_ws/install/create_bringup:/home/mkouda/create_ws/install/create_driver:/home/mkouda/create_ws/install/libcreate:/home/mkouda/create_ws/install/create_msgs:/home/mkouda/create_ws/install/create_description:/opt/ros/humble LD_LIBRARY_PATH=/home/mkouda/create_ws/src/install/libcreate/lib:/home/mkouda/create_ws/src/install/create_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/mkouda/create_ws/src/install/libcreate/lib/aarch64-linux-gnu/pkgconfig:/home/mkouda/create_ws/src/install/libcreate/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/mkouda/create_ws/src/install/create_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/mkouda/create_ws/src/build/create_robot -- -j4 -l4
+[264.886s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mkouda/create_ws/src/build/create_robot': AMENT_PREFIX_PATH=/home/mkouda/create_ws/src/install/create_bringup:/home/mkouda/create_ws/src/install/create_driver:/home/mkouda/create_ws/src/install/create_msgs:/home/mkouda/create_ws/src/install/create_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mkouda/create_ws/src/install/create_bringup:/home/mkouda/create_ws/src/install/create_driver:/home/mkouda/create_ws/src/install/libcreate:/home/mkouda/create_ws/src/install/create_msgs:/home/mkouda/create_ws/src/install/create_description:/home/mkouda/create_ws/install/create_robot:/home/mkouda/create_ws/install/create_bringup:/home/mkouda/create_ws/install/create_driver:/home/mkouda/create_ws/install/libcreate:/home/mkouda/create_ws/install/create_msgs:/home/mkouda/create_ws/install/create_description:/opt/ros/humble LD_LIBRARY_PATH=/home/mkouda/create_ws/src/install/libcreate/lib:/home/mkouda/create_ws/src/install/create_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/mkouda/create_ws/src/install/libcreate/lib/aarch64-linux-gnu/pkgconfig:/home/mkouda/create_ws/src/install/libcreate/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/mkouda/create_ws/src/install/create_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/mkouda/create_ws/src/build/create_robot
+[264.941s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(create_robot)
+[264.942s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_robot' for CMake module files
+[264.944s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mkouda/create_ws/src/build/create_robot' returned '0': AMENT_PREFIX_PATH=/home/mkouda/create_ws/src/install/create_bringup:/home/mkouda/create_ws/src/install/create_driver:/home/mkouda/create_ws/src/install/create_msgs:/home/mkouda/create_ws/src/install/create_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mkouda/create_ws/src/install/create_bringup:/home/mkouda/create_ws/src/install/create_driver:/home/mkouda/create_ws/src/install/libcreate:/home/mkouda/create_ws/src/install/create_msgs:/home/mkouda/create_ws/src/install/create_description:/home/mkouda/create_ws/install/create_robot:/home/mkouda/create_ws/install/create_bringup:/home/mkouda/create_ws/install/create_driver:/home/mkouda/create_ws/install/libcreate:/home/mkouda/create_ws/install/create_msgs:/home/mkouda/create_ws/install/create_description:/opt/ros/humble LD_LIBRARY_PATH=/home/mkouda/create_ws/src/install/libcreate/lib:/home/mkouda/create_ws/src/install/create_msgs/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/mkouda/create_ws/src/install/libcreate/lib/aarch64-linux-gnu/pkgconfig:/home/mkouda/create_ws/src/install/libcreate/lib/pkgconfig:${PKG_CONFIG_PATH} PYTHONPATH=/home/mkouda/create_ws/src/install/create_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/mkouda/create_ws/src/build/create_robot
+[264.946s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_robot' for CMake config files
+[264.948s] Level 1:colcon.colcon_core.shell:create_environment_hook('create_robot', 'cmake_prefix_path')
+[264.948s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkouda/create_ws/src/install/create_robot/share/create_robot/hook/cmake_prefix_path.ps1'
+[264.950s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mkouda/create_ws/src/install/create_robot/share/create_robot/hook/cmake_prefix_path.dsv'
+[264.952s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkouda/create_ws/src/install/create_robot/share/create_robot/hook/cmake_prefix_path.sh'
+[264.954s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_robot/bin'
+[264.955s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_robot/lib/pkgconfig/create_robot.pc'
+[264.956s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_robot/lib/python3.10/site-packages'
+[264.957s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_robot/bin'
+[264.958s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_robot/share/create_robot/package.ps1'
+[264.960s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mkouda/create_ws/src/install/create_robot/share/create_robot/package.dsv'
+[264.962s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_robot/share/create_robot/package.sh'
+[264.964s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_robot/share/create_robot/package.bash'
+[264.965s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_robot/share/create_robot/package.zsh'
+[264.967s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mkouda/create_ws/src/install/create_robot/share/colcon-core/packages/create_robot)
+[264.969s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(create_robot)
+[264.970s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_robot' for CMake module files
+[264.973s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_robot' for CMake config files
+[264.975s] Level 1:colcon.colcon_core.shell:create_environment_hook('create_robot', 'cmake_prefix_path')
+[264.975s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkouda/create_ws/src/install/create_robot/share/create_robot/hook/cmake_prefix_path.ps1'
+[264.977s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mkouda/create_ws/src/install/create_robot/share/create_robot/hook/cmake_prefix_path.dsv'
+[264.979s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkouda/create_ws/src/install/create_robot/share/create_robot/hook/cmake_prefix_path.sh'
+[264.982s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_robot/bin'
+[264.982s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_robot/lib/pkgconfig/create_robot.pc'
+[264.983s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_robot/lib/python3.10/site-packages'
+[264.984s] Level 1:colcon.colcon_core.environment:checking '/home/mkouda/create_ws/src/install/create_robot/bin'
+[264.985s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_robot/share/create_robot/package.ps1'
+[264.987s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mkouda/create_ws/src/install/create_robot/share/create_robot/package.dsv'
+[264.989s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_robot/share/create_robot/package.sh'
+[264.991s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_robot/share/create_robot/package.bash'
+[264.993s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkouda/create_ws/src/install/create_robot/share/create_robot/package.zsh'
+[264.995s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mkouda/create_ws/src/install/create_robot/share/colcon-core/packages/create_robot)
+[264.996s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[264.998s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[264.998s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[264.999s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[265.039s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[265.039s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[265.040s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[265.157s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[265.159s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mkouda/create_ws/src/install/local_setup.ps1'
+[265.164s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/mkouda/create_ws/src/install/_local_setup_util_ps1.py'
+[265.173s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mkouda/create_ws/src/install/setup.ps1'
+[265.180s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mkouda/create_ws/src/install/local_setup.sh'
+[265.184s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/mkouda/create_ws/src/install/_local_setup_util_sh.py'
+[265.186s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mkouda/create_ws/src/install/setup.sh'
+[265.193s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mkouda/create_ws/src/install/local_setup.bash'
+[265.196s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mkouda/create_ws/src/install/setup.bash'
+[265.202s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mkouda/create_ws/src/install/local_setup.zsh'
+[265.205s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mkouda/create_ws/src/install/setup.zsh'

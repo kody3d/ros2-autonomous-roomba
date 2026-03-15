@@ -1,0 +1,6 @@
+Invoking command in '/home/mkouda/create_ws/src/build/libcreate': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/mkouda/create_ws/src/libcreate -DCMAKE_INSTALL_PREFIX=/home/mkouda/create_ws/src/install/libcreate
+Invoked command in '/home/mkouda/create_ws/src/build/libcreate' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/mkouda/create_ws/src/libcreate -DCMAKE_INSTALL_PREFIX=/home/mkouda/create_ws/src/install/libcreate
+Invoking command in '/home/mkouda/create_ws/src/build/libcreate': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/mkouda/create_ws/src/build/libcreate -- -j4 -l4
+Invoked command in '/home/mkouda/create_ws/src/build/libcreate' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/mkouda/create_ws/src/build/libcreate -- -j4 -l4
+Invoking command in '/home/mkouda/create_ws/src/build/libcreate': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/mkouda/create_ws/src/build/libcreate
+Invoked command in '/home/mkouda/create_ws/src/build/libcreate' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/mkouda/create_ws/src/build/libcreate

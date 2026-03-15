@@ -1,0 +1,7 @@
+ydlidar_ros2_driver_node:
+  ros__parameters:
+    # QoS設定
+    qos_history: 1  # KEEP_LAST
+    qos_depth: 10
+    qos_reliability: 1  # RELIABLE (0=BEST_EFFORT, 1=RELIABLE)
+    qos_durability: 0   # VOLATILE

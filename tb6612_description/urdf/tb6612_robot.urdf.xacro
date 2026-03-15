@@ -1,0 +1,234 @@
+<?xml version="1.0"?>
+<robot name="tb6612_robot" xmlns:xacro="http://ros.org/wiki/xacro">
+
+
+<!--
+  tb6612_robot.urdf.xacro 仕様まとめ
+
+  - 本体（base_link）
+    ・直方体サイズ: 長さ0.15m × 幅0.2m × 高さ0.16m
+    ・色: 青
+
+  - 後輪（駆動輪, 左右）
+    ・半径: 0.0236m（直径約47.2mm）
+    ・幅: 0.02m
+    ・左右車輪中心間距離（wheel_base）: 0.14m
+    ・base_linkのz=0が車軸高さ
+    ・左右車輪の中心位置: y=±0.07m, z=0.0236m
+
+  - 前輪（オムニホイール, 左右）
+    ・半径: 0.024m（直径48mm）
+    ・幅: 0.02m
+    ・左右車輪中心間距離（wheel_base）: 0.14m
+    ・後輪軸（x=0）から前方x=0.075mに配置
+    ・左右オムニの中心位置: x=0.075m, y=±0.07m, z=0
+
+  - base_footprint
+    ・地面投影用リンク（z=0が地面）
+
+  - センサ
+    ・LiDAR: base_linkから前方0.038m, 上0.12m
+    ・IMU: base_linkから上0.02m
+
+  - 慣性・質量
+    ・本体: 1.0kg
+    ・駆動輪: 0.1kg
+    ・オムニ: 0.05kg
+
+  - その他
+    ・全リンク・ジョイントはxacroパラメータで寸法管理
+    ・色や慣性パラメータも設定済み
+    ・オムニホイールはfixed jointで回転しないダミー表現
+
+  ※この仕様はロボットの寸法・構成・リンク配置・センサ位置を誰が見ても分かるようにまとめています。
+-->
+
+  <!-- Robot Base Properties -->
+  <xacro:property name="base_width" value="0.2"/>
+  <xacro:property name="base_length" value="0.15"/>
+  <xacro:property name="base_height" value="0.16"/>
+  
+  <!-- Wheel Properties -->
+  <xacro:property name="wheel_radius" value="0.0236"/>
+  <xacro:property name="wheel_width" value="0.02"/>
+  <xacro:property name="wheel_base" value="0.14"/>
+
+  <!-- Colors -->
+  <material name="black">
+    <color rgba="0.0 0.0 0.0 1.0"/>
+  </material>
+  
+  <material name="blue">
+    <color rgba="0.0 0.0 1.0 1.0"/>
+  </material>
+  
+  <material name="green">
+    <color rgba="0.0 1.0 0.0 1.0"/>
+  </material>
+  
+  <material name="red">
+    <color rgba="1.0 0.0 0.0 1.0"/>
+  </material>
+
+  <!-- base_footprint link (ground projection) -->
+  <link name="base_footprint"/>
+
+  <!-- base_link (robot center) -->
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="${base_length} ${base_width} ${base_height}"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="${base_length} ${base_width} ${base_height}"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
+    </inertial>
+  </link>
+
+  <!-- base_footprint to base_link joint -->
+  <joint name="base_footprint_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Left Wheel -->
+  <link name="left_wheel">
+    <visual>
+      <origin xyz="0 0 0" rpy="1.5708 0 0"/>
+      <geometry>
+        <cylinder length="${wheel_width}" radius="${wheel_radius}"/>
+      </geometry>
+      <material name="black"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="1.5708 0 0"/>
+      <geometry>
+        <cylinder length="${wheel_width}" radius="${wheel_radius}"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <joint name="left_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="left_wheel"/>
+    <origin xyz="0 ${wheel_base/2} 0.0236" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <!-- Right Wheel -->
+  <link name="right_wheel">
+    <visual>
+      <origin xyz="0 0 0" rpy="1.5708 0 0"/>
+      <geometry>
+        <cylinder length="${wheel_width}" radius="${wheel_radius}"/>
+      </geometry>
+      <material name="black"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="1.5708 0 0"/>
+      <geometry>
+        <cylinder length="${wheel_width}" radius="${wheel_radius}"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <joint name="right_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="right_wheel"/>
+    <origin xyz="0 -${wheel_base/2} 0.0236" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+
+
+<!-- Left Omni Wheel -->
+<link name="left_omni_wheel">
+  <visual>
+    <origin xyz="0 0 0" rpy="1.5708 0 0"/>
+    <geometry>
+      <cylinder length="${wheel_width}" radius="0.024"/>
+    </geometry>
+    <material name="black"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="1.5708 0 0"/>
+    <geometry>
+      <cylinder length="${wheel_width}" radius="0.024"/>
+    </geometry>
+  </collision>
+  <inertial>
+    <mass value="0.05"/>
+    <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+  </inertial>
+</link>
+
+<joint name="left_omni_wheel_joint" type="fixed">
+  <parent link="base_link"/>
+  <child link="left_omni_wheel"/>
+  <origin xyz="0.075 ${wheel_base/2} 0" rpy="0 0 0"/>
+</joint>
+
+<!-- Right Omni Wheel -->
+<link name="right_omni_wheel">
+  <visual>
+    <origin xyz="0 0 0" rpy="1.5708 0 0"/>
+    <geometry>
+      <cylinder length="${wheel_width}" radius="0.024"/>
+    </geometry>
+    <material name="black"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="1.5708 0 0"/>
+    <geometry>
+      <cylinder length="${wheel_width}" radius="0.024"/>
+    </geometry>
+  </collision>
+  <inertial>
+    <mass value="0.05"/>
+    <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+  </inertial>
+</link>
+
+<joint name="right_omni_wheel_joint" type="fixed">
+  <parent link="base_link"/>
+  <child link="right_omni_wheel"/>
+  <origin xyz="0.075 -${wheel_base/2} 0" rpy="0 0 0"/>
+</joint>
+
+  <!-- LiDAR Frame -->
+  <!-- <link name="laser_frame"/>
+  
+  <joint name="laser_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="laser_frame"/>
+    <origin xyz="0.038 0 0.12" rpy="0 0 0"/>
+  </joint> -->
+
+  <!-- IMU Frame -->
+  <link name="imu_link"/>
+  
+  <joint name="imu_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="imu_link"/>
+    <origin xyz="0 0 0.02" rpy="0 0 0"/>
+  </joint>
+
+</robot>
