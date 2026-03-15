@@ -1,6 +1,8 @@
 # ROS2 Autonomous Roomba 実践構築(2025 ４-9月構築分)
 
-ROS2 (humble/Jazzy) を用いた自律走行ロボット。iRobot Create3 をベースに、LiDAR・IMU を統合した SLAM + Nav2 ナビゲーションスタックを構築。実機での自律走行を　ROS2学習開始３ヶ月で実現。
+ROS2 (humble/Jazzy) を用いた自律走行ロボット。iRobot Create3 をベースに、LiDAR・IMU を統合した SLAM + Nav2 ナビゲーションスタックを構築。実機での自律走行を　ROS2学習開始３ヶ月で実現。ros2brigeでUI
+
+
 
 
 ---
@@ -15,6 +17,9 @@ ROS2 (humble/Jazzy) を用いた自律走行ロボット。iRobot Create3 をベ
 
 <video src="https://github.com/user-attachments/assets/f40b25f6-8eaf-464d-89cb-5450d7911521" controls width="100%"></video>
 
+
+rosbridge_suiteとReactでROS 2 Webアプリ
+https://github.com/kody3d/ros2-autonomous-roomba/blob/main/img/IMG_3291.jpg
 ---
 
 ## System Architecture
