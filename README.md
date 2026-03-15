@@ -31,12 +31,19 @@ ROS2 (humble/Jazzy) を用いた自律走行ロボット。まずはモーター
        style="border:1px solid #ccc; border-radius:10px; box-shadow:2px 2px 8px #aaa;">
 
 
-<b>Twist受信 モーター制御 オドメトリ 自前で実装</b>
+<b>Twist受信 TB6612モーター制御 オドメトリ 実装</b>
 
  <img src="https://github.com/kody3d/ros2-autonomous-roomba/blob/main/img/IMG_3456.jpg"
        alt="駆動部 自前で実装"
        height="400"
        style="border:1px solid #ccc; border-radius:10px; box-shadow:2px 2px 8px #aaa;">
+
+
+
+**移動感表現 LED Matrix**
+
+<video src="https://github.com/user-attachments/assets/db39e14b-9861-428b-b35a-7f6920c868d2" controls width="100%"></video>
+
 
 ---
 
