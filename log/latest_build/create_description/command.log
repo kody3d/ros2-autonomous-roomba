@@ -1,4 +1,0 @@
-Invoking command in '/home/mkouda/create_ws/src/build/create_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/mkouda/create_ws/src/build/create_description -- -j4 -l4
-Invoked command in '/home/mkouda/create_ws/src/build/create_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/mkouda/create_ws/src/build/create_description -- -j4 -l4
-Invoking command in '/home/mkouda/create_ws/src/build/create_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/mkouda/create_ws/src/build/create_description
-Invoked command in '/home/mkouda/create_ws/src/build/create_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/mkouda/create_ws/src/build/create_description
